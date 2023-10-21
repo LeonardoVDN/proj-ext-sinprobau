@@ -8,6 +8,12 @@ button:focus {
 	outline: none !important;
 }
 
+.sindicato-button, .sindicato-button:focus {
+	color: #ffffff;
+	background-color: #02231C;
+	border-color: #02231C;
+}
+
 button::-moz-focus-inner {
 	border: 0;
 }
