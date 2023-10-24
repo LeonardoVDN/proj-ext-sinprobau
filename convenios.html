@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convênios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo1.png" type="logo1">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0 auto;
+            background-color: #d4f2cd;
+        }
+
+        h1 {
+    text-align: center;
+}
+
+    .caixinha {
+        background-color: #edf7eb;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 20px auto;
+        border-radius: 5px;
+        max-width: 800px;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        margin-bottom: 20px;
+        }
+
+
+    .caixinha:first-child {
+        margin-top: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            margin: 0;
+            color: #555;
+        }
+
+        .caixinha h2 {
+            margin-top: 0;
+        }
+
+        .caixinha strong {
+            font-weight: bold;
+        }
+
+        .caixinha em {
+            font-style: italic;
+        }
+
+        .caixinha u {
+            text-decoration: underline;
+        }
+
+        .destacado {
+            color: #4c8a41;
+        }
+
+        .academia {
+            margin-bottom: 20px;
+        }
+
+        .academia h3 {
+            color: #4c8a41;
+            margin-bottom: 0;
+
+        }
+
+        .email-link {
+            color: #4c8a41;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .desconto {
+            text-decoration: underline;
+        }
+
+        .clinica h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .institutos h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .beleza h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .farmacia h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .impressora h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .odontologia h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .oticas h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .titulos-geral h3 {
+    color: #4c8a41;
+    margin-bottom: 0;
+        }
+
+        .site-link {
+            color: #4c8a41;
+            text-decoration: none;
+        }
+
+        .site-link:hover {
+            text-decoration: underline;
+        }
+        
+  /*css botões clicaveis*/
+
+  .botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.botao {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4c8a41;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 5px;
+    width: 10em;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.linha-botoes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.linha-botoes .botao {
+    margin: 5px;
+    width: 150px; 
+}
+
+
+.botao-link {
+    text-decoration: none;
+    color: #fff; 
+}
+
+.botao:hover {
+    background-color: #396e34;
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body> 
+    <!-- Caixa título convênios -->
+    <h1>Convênios</h1>
+    <div class="caixinha">
+        <h2>Para garantir a qualidade de vida associados e dependentes, o SINPROBAU mantêm convênios com diversas empresas que oferecem descontos em produtos e serviços.</h2>
+        <p>Conheça abaixo os locais e empresas parceiras e desfrute dos benefícios!</p>
+    </div>
+    <!-- Botoes clicaveis -->
+<div class="botoes linha-botoes">
+    <a href="#academia" class="botao botao-link">ACADEMIA</a>
+    <a href="#clinica" class="botao botao-link">CLÍNICA</a>
+    <a href="#instituto" class="botao botao-link">INSTITUTO DE ENSINO</a>
+    <a href="#beleza" class="botao botao-link">BELEZA</a>
+    </div>
+    <div class="linha-botoes">
+        <a href="#farmacia" class="botao botao-link">FARMÁCIA</a>
+        <a href="#suprimentos" class="botao botao-link">SUPRIMENTOS DE IMPRESSORA</a>
+        <a href="#odontologia" class="botao botao-link">ODONTOLOGIA</a>
+        <a href="#oticas" class="botao botao-link">ÓTICAS</a>
+    </div>
+    <div class="linha-botoes">
+        <a href="#perfumaria" class="botao botao-link">PERFUMARIA</a>
+        <a href="#viagem" class="botao botao-link">VIAGEM</a>
+        <a href="#casa" class="botao botao-link">CASA</a>
+        <a href="#promotores" class="botao botao-link">PROMOTORES DE SAÚDE</a>
+    </div>
+    <div class="linha-botoes">
+        <a href="#fisioterapia" class="botao botao-link">FISIOTERAPIA</a>
+        <a href="#barbearia" class="botao botao-link">BARBEARIAS</a>
+        <a href="#laboratorio" class="botao botao-link">LABORATÓRIOS</a>
+        <a href="#massagem" class="botao botao-link">MASSAGEM</a>
+    </div>
+    <div class="linha-botoes">
+        <a href="#nutricao" class="botao botao-link">NUTRIÇÃO</a>
+        <a href="#podologia" class="botao botao-link">PODOLOGIA</a>
+        <a href="#psicologia" class="botao botao-link">PSICOLOGIA</a>
+        <a href="#lazer" class="botao botao-link">LAZER</a>
+    </div>
+    </div>
+   <!-- Caixinha academia -->
+<div class="caixinha academia" id="academia">
+    <h2>ACADEMIAS</h2>
+    <div class="academia">
+        <h3 class="destacado">Estação Mulher</h3>
+        <p><strong>Endereço:</strong> Av. Nossa Senhora de Fátima, n.º 18-59, Jd. América, Bauru, SP</p>
+        <p><strong>Telefone:</strong> (14) 3245-4040 - (14) 99124-8379</p>
+        <p><strong>Email:</strong> <a href="mailto:contato@estacao-mulher.com" class="email-link">contato@estacao-mulher.com</a></p>
+        <p><strong>Desconto:</strong> <u class="desconto">20% de desconto na matrícula e mensalidades circuito e/ou musculação</u></p>
+    </div>
+    <div class="academia">
+        <h3 class="destacado">Guaraná Club Academia</h3>
+        <p><strong>Endereço:</strong> Hildebrando de Carvalo, 9-46, Jd. Bela Vista, Bauru, SP</p>
+        <p><strong>Telefone:</strong> (14) 3018-2448</p>
+        <p><strong>Desconto:</strong> <u class="desconto">10% de desconto</u></p>
+    </div>
+        <div class="academia">
+            <h3 class="destacado">Nadart Escola</h3>
+            <p><strong>Endereço:</strong> Benedito Eleutério, 6-49, Vila Pacifico, Bauru, SP</p>
+            <p><strong>Telefone:</strong> (14) 3238-2088 </p>
+            <p><strong>Desconto:</strong> <u class="desconto">10% de desconto nos planos mensais e 15% nos planos trimestral, semestral e anual</u></p>
+        </div>
+        <div class="academia">
+            <h3 class="destacado">Forma Academia</h3>
+            <p><strong>Endereço:</strong> Avenida Nações Unidas, 1-126, Vila Formosa, Bauru, SP</p>
+            <p><strong>Telefone:</strong> (14) 3277-7191</p>
+            <p><strong>Email:</strong> <a href="mailto:sac@formaacademia.com.br" class="email-link">sac@formaacademia.com.br</a></p>
+            <p><strong>Desconto:</strong> <u class="desconto">40% de desconto sobre valor mensal</u></p>
+        </div>
+        <div class="academia">
+            <h3 class="destacado">Up Assessoria Esportiva</h3>
+            <p><strong>Carlos Henrique Diguê de Carvalho</strong></p>
+            <p><strong>André Velosa</strong></p>
+            <p><strong>Telefone:</strong> (14) 99702-9062</p>
+            <p><strong>Email:</strong> <a href="mailto:carlosdigue@ig.com.brsac@formaacademia.com.br" class="email-link">carlosdigue@ig.com.br</a></p>
+            <p><strong>Desconto:</strong> <u class="desconto">40% de desconto sobre valor mensal</u></p>
+        </div>
+    </div>
+        <!-- Caixinha clínicas -->
+        <div class="caixinha" id="clinica">
+            <h2>CLÍNICAS</h2>
+            <div class="clinica">
+                <h3 class="destacado">Pró – Clinica Bauru</h3>
+                <p><strong>Endereço:</strong> Rua Antônio Alves, 24-42, Bauru, SP</p>
+                <p><strong>Telefone:</strong> (14) 3245-4447</p>
+                <p><strong>Desconto:</strong> <u class="desconto">R$ 70,00 em consultas clínicas e o desconto nos exames</u> (Retirar autorização no sindicato e apresentar documento com foto)</p>
+            </div>
+            <div class="clinica">
+                <h3 class="destacado">Clínicas Vigus</h3>
+                <p><strong>Dra. Eliane Alves M. Cabello dos Santos – Pediatra</strong></p>
+                <p><strong>Dr. Marcos Cabello dos Santos – Ginecologia e Obstetrícia</strong></p>
+                <p><strong>Endereço:</strong> Rua Rubens Arruda, 11-82, Bauru, SP</p>
+                <p><strong>Telefone:</strong> (14) 3234-3999 - (14) 3204-0159</p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em consultas e exames particulares </u></p>
+            </div>
+            <div class="clinica">
+                <h3 class="destacado">Dra. Rosangela F. Nogueira</h3>
+                <p><strong>Médica - Clinica Geral e Medicina do Trabalho</strong></p>
+                <p><strong>Endereço:</strong> Rua Antônio Alves, 15-35, Bauru, SP</p>
+                <p><strong>Telefone:</strong> (14) 3234-5481</p>
+                <p><strong>Desconto:</strong> <u class="desconto"> R$100,00 em consultas</u></p>
+            </div>
+            <div class="clinica">
+                <h3 class="destacado">Acupuntura</h3>
+                <p><strong>Silvana Coradi</strong></p>
+                <p><strong>Endereço:</strong> Rua Machado de Assis, 12-58, Bauru, SP</p>
+                <p><strong>Telefone:</strong> (14) 3234-1914 </p>
+                <p><strong>Email:</strong> <a href="mailto:scuradi@gmail.com" class="email-link">scuradi@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto</u></p>
+            </div>
+        </div>
+        <!-- Caixinha institutos -->
+        <div class="caixinha" id="instituto">
+            <h2>INSTITUTOS DE ENSINO</h2>
+            <div class="institutos">
+                <h3 class="destacado">American Corner Bauru</h3>
+                <p><strong>Endereço:</strong> Rua Antônio Alves, 22-78, Bauru, SP</p>
+                <p><strong>Telefone:</strong> (14) 3214-3020 - (14) 3214-3040 </p>
+                <p><strong>WhatsApp::</strong> (14) 99162-5465 </p>
+                <p><strong>Email:</strong> <a href="mailto:americancornerhigienopolis@gmail.com" class="email-link">americancornerhigienopolis@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 100% de desconto na primeira parcela</u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Colégio Adventista de Bauru</h3>
+                <p><strong>Endereço:</strong> Praça Itália, 3-09, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3321-5100 </p>
+                <p><strong>Site: </strong><a href="https://www.educadventista.com" target="_blank" class="site-link">www.educadventista.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 15% sobre o valor da mensalidade no ano em que o contrato for celebrado </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Criarte</h3>
+                <p><strong>Endereço:</strong> Rua Antônio Alves, 31-51, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 2107-8200 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 10% de desconto </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Esquema Único</h3>
+                <p><strong>Endereço:</strong> Rua Rio Branco, 28-18, Estoril IV, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 2107-8200 </p>
+                <p><strong>Email:</strong> <a href="mailto:contato@eei.com.br" class="email-link">contato@eei.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto no ensino médio e 50% de desconto no ensino fundamental </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">FAAG - Faculdades de Agudos</h3>
+                <p><strong>Endereço:</strong> Av. Marginal Vereador Delfino Tendolo, D1200, Agudos, SP </p>
+                <p><strong>Telefone:</strong> (14) 3262-9400 </p>
+                <p><strong>Descontos nos cursos:</strong></p>
+                </p>- Administração 15% </p>
+                </p>- Ciências Contábeis 15% </p>
+                </p>- Engenharia de Produção 10% </p>
+                </p>- Pedagogia 10% </p>
+                </p>- Letras 10% </p>
+                </p>- Tecnologia em Logística 10% </p>
+                </p>- Tecnologia em Recursos Humanos 10% </p>
+                </p>- Análise e Desenvolvimento de Sistemas 10% </p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Faculdade FGP</h3>
+                <p><strong>Endereço:</strong> Rua Prof. Massud José Nachef, O 2855, Pederneiras, SP </p>
+                <p><strong>Telefone:</strong> (14) 3284-4999 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em todos os cursos de graduação </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Focus Idiomas</h3>
+                <p><strong>Idiomas:</strong> Inglês, espanhol, francês, italiano, japonês, alemão e português para estrangeiros</p>
+                <p><strong>Endereço:</strong> Rua Christiano Pagani, 5-38, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3879-6793 </p>
+                <p><strong>Email:</strong> <a href="mailto:contato@focusidiomasbauru.com.br" class="email-link">contato@focusidiomasbauru.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 40% de desconto nas mensalidades </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Unisagrado</h3>
+                <p><strong>Endereço:</strong> Rua Irmã Arminda, 10-50, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 2107-7000 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 15% de desconto nas mensalidades dos cursos de pós-graduação (em razão da pontualidade do pagamento) </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Unisa - Polo Bauru</h3>
+                <p><strong>Educacional superior e pós-graduação a distância</strong></p>
+                <p><strong>Endereço:</strong> Avenida Nações Unidas, 14-68, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3243-6412 </p>
+                <p><strong>Email:</strong> <a href="mailto:bauru@polounisa.br" class="email-link">bauru@polounisa.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 15% de desconto </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Wizard Idiomas</h3>
+                <p><strong>Endereço 1:</strong> Avenida Nações Unidas, 14-68, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3234-1005 </p>
+                <p><strong>Endereço 2:</strong> Av. Nossa Sra. De Fátima, 18-49, Jd. América, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3234-1682 </p>
+                <p><strong>Endereço 3:</strong> Rua Manoel Victorino Rello de Araújo, 5-131, Mary Dota. Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3237-5484 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 50% de descosto na primeira parcela e 30% de desconto nas próximas parcelas </u></p>
+            </div>
+            <div class="institutos">
+                <h3 class="destacado">Yazigi Bauru</h3>
+                <p><strong>Endereço:</strong> Rua Professor Alberto Brandão de Rezende, 1-140, Jardim Amália, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3104-6070 </p>
+                <p><strong>Email:</strong> <a href="mailto:bauru@yazigi.com" class="email-link">bauru@yazigi.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto nas mensalidadessem e isenção na taxa de matrícula </u></p>
+            </div>
+        </div>
+        <!-- Caixinha beleza -->
+        <div class="caixinha" id="beleza">
+            <h2>BELEZA</h2>
+            <div class="beleza">
+                <h3 class="destacado">Mayara Rocha Estética e Make-up</h3>
+                <p><strong>Designer de sobrancelha, depilação, limpeza de pele, maquiagem e micropigmentação</strong></p>
+                <p><strong>Endereço 1:</strong> Rua Nilo Mazzoni, 45,  Jd Marcia, Agudos, SP </p>
+                <p><strong>Endereço 2:</strong> Rua Henrique Save 6-7, Bauru, SP </p>
+                <p><strong>Telefone e WhatsApp:</strong> (14) 99126-7272 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em serviços e 10% de desconto em micropigmentação </u></p>
+            </div>
+            <div class="beleza">
+                <h3 class="destacado">Studio de Beleza Irmãs Ribeiro</h3>
+                <p><strong>Cauterização, cortes unissex, designer de sobrancelhas, luzes, maquiagem, progressiva, relaxamento e manicure</strong></p>
+                <p><strong>Endereço:</strong> Rua Lisboa Junior, 1-82, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3879-2496 - (14) 99768-7514 </p>
+                <p><strong>Email:</strong> <a href="mailto:studiodebelezairmasribeiro@hotmail.com" class="email-link">studiodebelezairmasribeiro@hotmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em cortes e 15% de desconto em demais serviços </u></p>
+            </div>
+        </div>
+        <!-- Caixinha farmacia -->
+        <div class="caixinha" id="farmacia">
+            <h2>FARMÁCIA</h2>
+            <div class="farmacia">
+                <h3 class="destacado">Farmácia Santo Remédio</h3>
+                <p><strong>Endereço:</strong> Rua Afonso Pena, 6-20, Bela Vista, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3222-4811 - (14) 3233-4811 </p>
+                <p><strong>WhatsApp:</strong> (14) 99702-5552 </p>
+                <p><strong>Email:</strong> <a href="mailto:sremedio@uol.com.br" class="email-link">sremedio@uol.com.br</a></p>
+                <p><strong>Benefícios:</strong></p>
+                <p>- Compras à vista 20% de desconto em todos os produtos formulados não promocionais</p>
+                <p>- Compras à prazo no cartão em 3 vezes e no cheque pré datado para 40 (quarenta dias) com 10% de desconto em todos os produtos não promocionais</p>
+                <p>- Entrega grátis sem taxas adicionais</p>
+                <p>- Itens com preços reduzidos</p>
+                <p>- Farmácia de manipulação própria</p>
+                <p>- Buscam as receitas</p>
+                <p>- Atenção farmacêutica</p>
+                <p>- Medicamentos personalizados</p>
+            </div>
+            <div class="farmacia">
+                <h3 class="destacado">Pharmácia Specífica</h3>
+                <p><strong>Endereço 1:</strong> Rua Gustavo Maciel, 14-65, Bauru, SP </p>
+                <p><strong>Endereço 2:</strong> Rua Antônio Alves, 26-09, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3104-3355 </p>
+                <p><strong>WhatsApp:</strong> (14) 98164-6444 </p>
+                <p><strong>Email:</strong> <a href="mailto:atendimento@specifica.com.br" class="email-link">atendimento@specifica.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 10% de desconto à vista ou cheque para 30 dias sem desconto </u></p>
+            </div>
+            <div class="farmacia">
+                <h3 class="destacado">Formulare Bauru</h3>
+                <p><strong>Endereço:</strong> Rua Gustavo Maciel. 24-43, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3245-4888 </p>
+                <p><strong>WhatsApp:</strong> (14) 99183-0330 </p>
+                <p><strong>Email:</strong> <a href="mailto:orcamentoformulare@hotmail.com" class="email-link">orcamentoformulare@hotmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 15% de desconto em pagamento à vista </u></p>
+            </div>
+        </div>
+        <!-- Caixinha suprimentos impressora -->
+        <div class="caixinha" id="suprimentos">
+            <h2>SUPRIMENTOS DE IMPRESSORA</h2>
+            <div class="impressora">
+                <h3 class="destacado">Ink Master</h3>
+                <p><strong>Suprimentos de impressão - cartuchos e toners</strong></p>
+                <p><strong>Endereço:</strong> Av. Nossa Senhora de Fátima, 6-67, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3226-2527 </p>
+                <p><strong>Email:</strong> <a href="mailto:inkmaster@inkmaster.com.br" class="email-link">inkmaster@inkmaster.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 10% de desconto em recargas de cartuchos </u></p>
+            </div>
+        </div>
+        <!-- Caixinha odonto -->
+        <div class="caixinha" id="odontologia">
+            <h2>ODONTOLOGIA</h2>
+            <div class="odontologia">
+                <h3 class="destacado">3D Radiologia Digital Odontológica</h3>
+                <p><strong>Endereço I:</strong> Rua Anita Garibaldi, 1429, Jd. Morumbi, Lençóis Paulista, SP </p>
+                <p><strong>Telefone:</strong> (14) 3264-7210 - (14) 99681-5674 </p>
+                <p><strong>Endereço II:</strong> Rua Monsenhor Claro, 14-85, Vila Mesquita, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3223-1243 - (14) 3245-1245 - (14) 99686-7041 </p>
+                <p><strong>Site: </strong><a href="https://www.3dradiologia.com.br" target="_blank" class="site-link">www.3dradiologia.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+            <div class="odontologia">
+                <h3 class="destacado">Naila Zancheta Bergamashi</h3>
+                <p><strong>Clinica Geral</strong></p>
+                <p><strong>Endereço:</strong> Rua Aviador Gomes Ribeiro, 4-66, Altos da Cidade, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3227-8363 - (14) 3234-1038 - (14) 98203-1212 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+            <div class="odontologia">
+                <h3 class="destacado">Dr. Darcy Bernardi Neto</h3>
+                <p><strong>Odontologia Bernardi – Clinica geral, implantodontia e endodontia (canal)</strong></p>
+                <p><strong>Endereço:</strong> Rua Primeiro de Agosto, 4-47, Edifício Caravela, 2º Andar, Sala 201 D, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3011-1123 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+            <div class="odontologia">
+                <h3 class="destacado">Dra. Paula Kennerly Herrera</h3>
+                <p><strong>Prótese dentária</strong></p>
+                <p><strong>Endereço:</strong> Rua Alfredo Ruiz, 4-28, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3256-0000 - (14) 99732-0558 </p>
+                <p><strong>Email:</strong> <a href="mailto:drapaulakennerly@yahoo.com.br" class="email-link">drapaulakennerly@yahoo.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% a 40% de desconto </u></p>
+            </div>  
+            <div class="odontologia">
+                <h3 class="destacado">Dr. Renato Pegoraro Ferreira</h3>
+                <p><strong>Clinica geral</strong></p>
+                <p><strong>Endereço:</strong> Rua Gustavo Maciel, 14-37, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3204-8590 - (14) 3011-2449 - (14) 99838-1562 </p>
+                <p><strong>Email:</strong> <a href="mailto:fitodontocenter@gmail.com" class="email-link">fitodontocenter@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 15% de desconto </u></p>
+            </div>
+            <div class="odontologia">
+                <h3 class="destacado">Dra. Nathalia Quirino Bueno</h3>
+                <p><strong>Clínica geral e urgência </strong></p>
+                <p><strong>Endereço:</strong> Rua Gerson França, 09-52, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3223-1622 - (14) 99808-4036</p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+            <div class="odontologia">
+                <h3 class="destacado">Dr. Ricardo De Oliveira Machado</h3>
+                <p><strong>Clinica geral</strong></p>
+                <p><strong>Endereço:</strong> Rua Azarias Leite, 16-85, Estoril, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 99116-7268 </p>
+                <p><strong>Email:</strong> <a href="mailto:rmodonto10@gmail.com" class="email-link">rmodonto10@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 10% a 50% de desconto</u></p>
+            </div>
+        </div>
+        <!-- Caixinha óticas-->
+        <div class="caixinha" id="oticas">
+            <h2>ÓTICAS</h2>
+            <div class="oticas">
+                <h3 class="destacado">Óptica Gold</h3>
+                <p><strong>Endereço:</strong> Rua Antonio Alves, 18-35, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3227-0337 </p>
+                <p><strong>WhatsApp:</strong> (14) 99193-4443 </p>
+                <p><strong>Email:</strong> <a href="mailto:opticagold@uol.com.br" class="email-link">opticagold@uol.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 5% a 25% de desconto e parcelamentos no cartão em até 6x </u></p>
+            </div>
+            <div class="oticas">
+                <h3 class="destacado">Óptica Santa Luzia</h3>
+                <p><strong>Endereço:</strong> Praça Rui Barbosa, 2-80, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3010-7509 </p>
+                <p><strong>WhatsApp:</strong> (14) 98228-2434 </p>
+                <p><strong>Email:</strong> <a href="mailto:osl.bauru@hotmail.com" class="email-link">osl.bauru@hotmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 5% a 70% de desconto e parcelamentos </u></p>
+            </div>
+        </div>
+        <!-- Caixinha perfumaria-->
+        <div class="caixinha" id="perfumaria">
+            <h2>PERFUMARIA</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">L'Acqua Di Fiori</h3>
+                <p><strong>Endereço:</strong> Rua Agenor Meira, 6-51, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3232-4027 </p>
+                <p><strong>Email:</strong> <a href="mailto:lacquadifioribau@terra.com.br" class="email-link">lacquadifioribau@terra.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 5% de desconto em pagamento à vista (no dinheiro) </u></p>
+            </div>
+        </div>
+        <!-- Caixinha viagenm-->
+        <div class="caixinha" id="viagem">
+            <h2>VIAGEM</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Travel Visa Bauru</h3>
+                <p><strong>Endereço:</strong> Rua Minas Gerais, 3-40, Apto 44B, Vila Cardia, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3010-6778 </p>
+                <p><strong>WhatsApp:</strong> (14) 99690-2539 </p>
+                <p><strong>Skype:</strong> alexandrecriscione </p>
+                <p><strong>Email:</strong> <a href="mailto:alexandrecriscione@gmail.com" class="email-link">alexandrecriscione@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto para assessoria em passaportes e vistos consulares (turismo, estudos e negócios) </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Tobias Viagens</h3>
+                <p><strong>Endereço:</strong> Rua Gustavo Maciel, 21-80, Loja 09, Galeria 21 Center, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3204-0499 - (14) 3204-0498 </p>
+                <p><strong>Email:</strong> <a href="mailto:rodoviario@tobiasviagens.com.br" class="email-link">rodoviario@tobiasviagens.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 10% de desconto </u></p>
+            </div>
+        </div>
+        <!-- Caixinha casa-->
+        <div class="caixinha" id="casa">
+            <h2>CASA</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Kasa Design</h3>
+                <p><strong>Loja especializada em pisos e revestimentos com experiência de 20 anos de marcado</strong></p>
+                <p><strong>Endereço:</strong> Rua Araújo Leite, 36-82, Jd. Aeroporto, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3879-3005 - (14) 3879-3006 - (14) 3879-3007 </p>
+                <p><strong>Formas de pagamento:</strong> Cartão de crédito, débito, Construcard e boleto bancário </p>
+                <p><strong>Email:</strong> <a href="mailto:contato@kasadesign.com.br" class="email-link">contato@kasadesign.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> Condições especiais e diferenciadas para associados </u></p>
+            </div>
+        </div>
+        <!-- Caixinha promotoras de saude-->
+        <div class="caixinha" id="promotores">
+            <h2>PROMOTORES DE SAÚDE</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Programa Escola Promotora de Saúde e Vida</h3>
+                <p><strong>Atividades para implementação das melhores condutas a serem seguidas a fim de prevenir o contágio do coronavírus, (com base nas normas e rotinas recomendadas pela OMS)</strong></p>
+                <p><strong>Endereço:</strong> Rua Araújo Leite, 36-82, Jd. Aeroporto, Bauru, SP </p>
+                <p><strong>WhatsApp:</strong> (14) 99856-1366 - (14) 98807-5600  </p>
+                <p><strong>Facebook: </strong><a href="https://www.facebook.com/vessaudeescolar" target="_blank" class="site-link">www.facebook.com/vessaudeescolar</a></p>
+                <p><strong>Site: </strong><a href="https://vessaudeescolar.com.br/" target="_blank" class="site-link">www.vessaudeescolar.com.br</a></p>
+            </div>
+        </div>
+        <!-- Caixinha fisioterapia -->
+        <div class="caixinha" id="fisioterapia">
+            <h2>FISIOTERAPIA</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Class Centro Integrado</h3>
+                <p><strong>Fisioterapia, fonoaudiologia, nutrição, psicologia, terapia ocupacional e estética</strong></p>
+                <p><strong>Endereço:</strong> Rua Doutor Alipio dos Santos, 13-14, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3206-3463  </p>
+                <p><strong>Email:</strong> <a href="mailto:classcentrointegrado@gmail.com" class="email-link">classcentrointegrado@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Fábio de Barros Rodrigues</h3>
+                <p><strong>Fisioterapia convencional, fisioterapia desportiva, quiropraxia, pilates e condicionamento físico</strong></p>
+                <p><strong>Endereço:</strong> Rua Capitão João Antônio, 10-73, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3313-8582 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 15% a 20% de desconto em pacotes e avaliação gratuita </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Talita de Souza Reis</h3>
+                <p><strong>Fisioterapia domiciliar</strong></p>
+                <p><strong>Telefone:</strong> (14) 3227-3383 - (14) 99744-4333 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto </u></p>
+            </div>
+        </div>
+        <!-- Caixinha barbearia-->
+        <div class="caixinha" id="barbearia">
+            <h2>BARBEARIAS</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Barbearia Zorzin</h3>
+                <p><strong>Endereço I:</strong> Avenida Nações Unidas, 22-44, Bauru, SP </p>
+                <p><strong>Endereço II:</strong> Rua Antônio Alves, 22-78, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3208-6570 </p>
+                <p><strong>Email:</strong> <a href="mailto:barbeariazorzin@outlook.com" class="email-link">barbeariazorzin@outlook.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+        </div>
+        <!-- Caixinha laboratorios -->
+        <div class="caixinha" id="laboratorio">
+            <h2>LABORATÓRIOS</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Clínica Dirceu Dalpinon</h3>
+                <p><strong>Laboratório de patologia</strong></p>
+                <p><strong>Endereço:</strong> Rua Rio Branco, 14-52, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3879-1753 </p>
+                <p><strong>Email:</strong> <a href="mailto:atendimento@dirceudalpino.com.br" class="email-link">atendimento@dirceudalpino.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto sobre a tabela particular </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Salutar Laboratório de Análises Clínicas</h3>
+                <p><strong>Endereço:</strong> Rua Monsenhor Claro 3-80, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3206-6689 - (14) 3243-1999 </p>
+                <p><strong>Email:</strong> <a href="mailto:salutarlaboratorio@gmail.com" class="email-link">salutarlaboratorio@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 50% de desconto sobre a tabela particular </u></p>
+            </div>
+        </div>
+        <!-- Caixinha massagem -->
+        <div class="caixinha" id="massagem">
+            <h2>MASSAGEM</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Toques de Equilíbrio</h3>
+                <p><strong>Rita de Cássia da Silva Lago</strong></p>
+                <p><strong>Endereço:</strong> Rua Manoel Bento Cruz, 12-04, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3206-6689 - (14) 3243-1999 </p>
+                <p><strong>Email:</strong> <a href="mailto:salutarlaboratorio@gmail.com" class="email-link">salutarlaboratorio@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 50% de desconto sobre a tabela particular </u></p>
+            </div>
+        </div>
+        <!-- Caixinha nutrição -->
+        <div class="caixinha" id="nutricao">
+            <h2>NUTRIÇÃO</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Barbara Aciardi da Silva</h3>
+                <p><strong>Endereço:</strong> Rua Gustavo Maciel, 15-07, 5º Andar, Sala 56, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 98116-6298 </p>
+                <p><strong>Email:</strong> <a href="mailto:barbara.nutrisaude@gmail.com" class="email-link">barbara.nutrisaude@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Daiane Cristine Lorensoni</h3>
+                <p><strong>Endereço:</strong> Avenida Nações Unidas, 5340, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 99658-3286 </p>
+                <p><strong>Email:</strong> <a href="mailto:daiane.lorensoninutri@gmail.com" class="email-link">daiane.lorensoninutri@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto </u></p>
+            </div>
+        </div>
+        <!-- Caixinha podologia -->
+        <div class="caixinha" id="podologia">
+            <h2>PODOLOGIA</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Doctor Feet</h3>
+                <P><strong>Clínica de podologia especializada em tratamentos e produtos específicos para os pés</strong></P>
+                <p><strong>Endereço:</strong> Praça Portugal nº 1-74, Loja 3, Jardim Estoril IV, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3227-5272 - 3208-5272 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 10% de desconto em todos os serviços da clínica (exceto pacotes promocionais) </u></p>
+            </div>
+        </div>
+        <!-- Caixinha psicologia -->
+        <div class="caixinha" id="psicologia">
+            <h2>PSICOLOGIA</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Amanda Campos Pereira</h3>
+                <p><strong>Endereço:</strong> Rua Maria José, 5-36, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 99888-7525 </p>
+                <p><strong>Email:</strong> <a href="mailto:amanda.ma.campos@gmail.com" class="email-link">amanda.ma.campos@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto nos atendimentos e primeira consulta gratuita </u></p>
+            </div>
+                <div class="titulos-geral">
+                <h3 class="destacado">Ana Levorato</h3>
+                <p><strong>Endereço:</strong> Rua Dr. Fuas de Mattos Sabino, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 99754-1406 </p>
+                <p><strong>Email:</strong> <a href="mailto:analevoratopsico@gmail.com" class="email-link">analevoratopsico@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto nos atendimentos e primeira consulta gratuita </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Cintia P. Gonçalves & Camila L. Saito</h3>
+                <p><strong>Endereço:</strong> Rua Antônio Alves, 34-17, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 99770-7723 - (14) 99674-2860 </p>
+                <p><strong>Email I:</strong> <a href="mailto:cintiapereira.ast@gmail.com" class="email-link">cintiapereira.ast@gmail.com</a></p>
+                <p><strong>Email II:</strong> <a href="mailto:camilabarros.psico@gmail.com" class="email-link">camilabarros.psico@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 40% de desconto nos atendimentos </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Danielle De Melo Munhoz</h3>
+                <p><strong>Psicoterapia</strong></p>
+                <p><strong>Endereço:</strong> Avenida Nossa Senhora de Fátima, 9-70, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3223-3026 - (14) 98812-7483 </p>
+                <p><strong>Email I:</strong> <a href="mailto:daniellemmunhoz@hotmail.com" class="email-link">daniellemmunhoz@hotmail.com</a></p>
+                <p><strong>Email II:</strong> <a href="mailto:daniellemunhozpsico@hotmail.com" class="email-link">daniellemunhozpsico@hotmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Gabriel Justino</h3>
+                <p><strong>Psicólogo especialista, fenomenológico e existencial </strong></p>
+                <p><strong>Endereço:</strong> Rua Rubens Arruda, 8-65, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 99684-8337 </p>
+                <p><strong>Email:</strong> <a href="mailto:gabrielfelipe.j@gmail.com" class="email-link">gabrielfelipe.j@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Grupo Guidio Trujillo (Atualizado em 08/02/2017)</h3>
+                <p><strong>Endereço:</strong> Rua Eduardo Vergueiro de Lorena, 3-58, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3234-3966 </p>
+                <p><strong>Profissionais:</strong></p>
+                <p>Fonoaudióloga - Andreza Carolina Bretanha</p>
+                <p>Fonoaudióloga - Ester Dalva Silvestre Junqueira</p>
+                <p>Psicóloga Clínica -  Priscilla Martins Moura Christianini</p>
+                <p>Psicóloga Clínica e Coaching - Marilza Delpino Zanardo</p>
+                <p>Psicóloga Clínica e Neuropsicologa - Cleusa da C. R. Shibata </p>
+                <p>Psicóloga Clínica e Psicopedagoga - Jussara Barbaresco Candosin</p>
+                <p>Psicóloga Clínica - Luciana da Costa Silva Saruhashi</p>
+                <p>Psicóloga Clínica - Marina Zulian Delazari</p>
+                <p>Psicóloga Clínica - Paula da S. Guidio Trujillo</p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 40% de desconto nos atendimentos </u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Mauricéia Quinhoneiro</h3>
+                <p><strong>Ateness terapias aplicadas, psicologia clínica, terapia cognitiva e comportamental </strong></p>
+                <p><strong>Endereço:</strong> Rua Aviador Gomes Ribeiro, 17-38, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3224-1544 </p>
+                <p><strong>Email:</strong> <a href="mailto:terapiacognitivabauru@gmail.com" class="email-link">terapiacognitivabauru@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto nos atendimentos e 15% de desconto nos cursos</u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Silvia Regina Braga Assis</h3>
+                <p><strong>Psicologia com atendimento para crianças, adolescentes e adultos </strong></p>
+                <p><strong>Endereço:</strong> Rua Monsenhor Claro, 10-77, Vila Mesquita, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3234-3346 - (14) 99797-4091 - (14) 98161-0646 </p>
+                <p><strong>Email:</strong> <a href="mailto:silvia.reginabragadeassis@gmail.com" class="email-link">silvia.reginabragadeassis@gmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 50% de desconto</u></p>
+            </div>
+            <div class="titulos-geral">
+                <h3 class="destacado">Vinícius de Carvalho Carreira</h3>
+                <p><strong>IPD – Instituto de Psicologia e Desenvolvimento </strong></p>
+                <p><strong>Endereço:</strong> Av. Duque de Caxias, 4-26, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3204-1517 - (14) 98171-1934 </p>
+                <p><strong>Email:</strong> <a href="mailto:contato@ipdbauru.com.br" class="email-link">contato@ipdbauru.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto nos atendimentos</u></p>
+            </div>
+        </div>
+        <!-- Caixinha lazer -->
+        <div class="caixinha" id="lazer">
+            <h2>LAZER</h2>
+            <div class="titulos-geral">
+                <h3 class="destacado">Sinpro – Bauru e Centros de Qualidade de Vida do SESI-SP</h3>
+                <p><strong>Os associados do Sinpro-Bauru com a apresentação da carteira associativa poderão frequentar os clubes do SESI Jaú, Bauru e Botucatu (da nossa região), e todos os outros do estado de São Paulo com valores diferenciados. Para ter acesso às piscinas somente após trazer o exame dermatológico. </strong></p>
+                <br>
+                <p><strong>Vantagens:</strong></p>
+                <p>- Livre utilização dos 55 Centros de Qualidade de Vida, mediante apresentação de carteirinha de usuário;</p>
+                <p>- Utilização de toda a área de lazer: Campo de Futebol / Campo de Grama Sintética / Piscinas recreativas e semiolímpica / Playground / Quadra poliesportiva coberta e descoberta / Ginásio de esportes / Quiosque com churrasqueira / Vestiários / Lanchonete / Pista de corrida e caminhada;</p>
+                <p>- Valores diferenciados nas taxas de manutenção;</p>
+                <p>- Desconto nas taxas dos produtos oferecidos nos Centros de Qualidade de Vida do SESI-SP;</p>
+                <p>- Plano Total - Extensão dos benefícios aos dependentes dos trabalhadores (Cônjuges e Filhos - até 21 anos)</p>
+                <br>
+                <p><strong>Sites:</strong></p>
+                <p><a href="https://bauru.sesisp.org.br" target="_blank" class="site-link">www.bauru.sesisp.org.br</a></p>
+                <p><a href="https://jau.sesisp.org.br" target="_blank" class="site-link">www.jau.sesisp.org.br</a></p>
+                <p><a href="https://botucatu.sesisp.org.br" target="_blank" class="site-link">www.botucatu.sesisp.org.br</a></p>
+                <p><a href="https://sesisp.org.br" target="_blank" class="site-link">www.sesisp.org.br</a></p>
+            </div>
+        </div>
+         <!-- Rodapé-->
+  <footer class="section footer-corporate context-dark">
+    <div class="footer-corporate-inset">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 35%;">
+          <div class="logo" style="display: flex; justify-content: center; padding-bottom: 25px;">
+            <img src="images/logo1.png" alt="Logo da Empresa" style="width: 60%;">
+          </div>
+          <div class="patrocinadores" style="display: flex; justify-content: center; align-items: center;">
+            <a href="http://contee.org.br/contee/" style="width: 10%;"><img src="images/logo_contee.png" alt="Logo Contee"></a>
+            <a href="http://portalctb.org.br/site/" style="width: 10%;"><img src="images/logo_ctb.png" alt="Logo CTB"></a>
+            <a href="http://www.fepesp.org.br/" style="width: 10%;"><img src="images/logo_fepesp.jpg" alt="Logo Fepesp"></a>
+          </div>
+        </div>
+        <div class="row row-40 justify-content-lg-between" style="width: 100%;">
+          <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+            <div class="oh-desktop">
+              <div class="wow slideInRight" data-wow-delay="0s">
+                <h6 class="text-spacing-100 text-uppercase">Sindicato dos Professores de Bauru</h6>
+                <ul class="footer-contacts d-inline-block d-sm-block">
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                      <div class="unit-body"><a class="link-phone" href="tel:#">(14) 3879-5313 - (FAX)</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                      <div class="unit-body"><a class="link-aemail" href="#">Mande um E-mail</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit">
+                      <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                      <div class="unit-body"><a class="link-location" href="#">Rua Capitão Gomes Duarte, 6-74 - Bauru - SP</a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright" style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
+    <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Javascript-->
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
