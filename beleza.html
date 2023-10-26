@@ -30,6 +30,142 @@
         html.lt-ie-10 .ie-panel {
             display: block;
         }
+
+        body {
+            
+            margin: 0 auto;
+            background-color: #d4f2cd;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .caixinha {
+            background-color: #edf7eb;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
+            max-width: 800px;
+            width: 100%;
+            border-top: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .caixinha:first-child {
+            margin-top: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        p {
+            margin: 0;
+            color: #555;
+        }
+
+        .caixinha h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .caixinha p {
+            margin-top: 5px;
+        }
+
+        .caixinha strong {
+            font-weight: bold;
+        }
+
+        .caixinha em {
+            font-style: italic;
+        }
+
+        .caixinha u {
+            text-decoration: underline;
+        }
+
+        .destacado {
+            color: #4c8a41;
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 1.17em;
+        }
+
+        .email-link {
+            color: #4c8a41;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .desconto {
+            text-decoration: underline;
+        }
+
+        .site-link {
+            color: #4c8a41;
+            text-decoration: none;
+        }
+
+        .site-link:hover {
+            text-decoration: underline;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .botao {
+            padding: 10px 20px;
+            font-size: 12px;
+            background-color: #4c8a41;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px 5px;
+            width: 10em;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .linha-botoes {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .linha-botoes .botao {
+            margin: 5px;
+            width: 150px;
+        }
+
+
+        .botao-link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .botao:hover {
+            background-color: #396e34;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -120,97 +256,46 @@
 
     <!--Principal-->
     <main>
-        <section class="section section-sm">
-            <div class="container">
-              <h3 style="text-align: center; padding-bottom: 15px;">Convênios</h3>
-              <div class="row row-30">
-                <div class="col-sm-6 col-lg-4">
-                  <article class="box-icon-classic">
-                    <div
-                      class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                      <div class="unit-left">
-                        <div class="box-icon-classic-icon fa fa-heartbeat"></div>
-                      </div>
-                      <div class="unit-body">
-                        <h5 class="box-icon-classic-title"><a href="saude.html">Saúde</a></h5>
-                        <p class="box-icon-classic-text">Sua saúde, nossa prioridade!</p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <article class="box-icon-classic">
-                    <div
-                      class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                      <div class="unit-left">
-                        <div class="box-icon-classic-icon fa fa-graduation-cap"></div>
-                      </div>
-                      <div class="unit-body">
-                        <h5 class="box-icon-classic-title"><a href="educacao.html">Educação</a></h5>
-                        <p class="box-icon-classic-text">Aqui, conhecimento é poder!</p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <article class="box-icon-classic">
-                    <div
-                      class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                      <div class="unit-left">
-                        <div class="box-icon-classic-icon 	fa fa-smile-o"></div>
-                      </div>
-                      <div class="unit-body">
-                        <h5 class="box-icon-classic-title"><a href="beleza.html">Beleza</a></h5>
-                        <p class="box-icon-classic-text">Realce sua beleza, revele seu poder!</p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <article class="box-icon-classic">
-                    <div
-                      class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                      <div class="unit-left">
-                        <div class="box-icon-classic-icon fa fa-shopping-cart"></div>
-                      </div>
-                      <div class="unit-body">
-                        <h5 class="box-icon-classic-title"><a href="comercio.html">Comércio</a></h5>
-                        <p class="box-icon-classic-text">Compras inteligentes, sorrisos constantes!</p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <article class="box-icon-classic">
-                    <div
-                      class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                      <div class="unit-left">
-                        <div class="box-icon-classic-icon fa fa-plane"></div>
-                      </div>
-                      <div class="unit-body">
-                        <h5 class="box-icon-classic-title"><a href="viagem.html">Viagem</a></h5>
-                        <p class="box-icon-classic-text">Descubra o mundo conosco, aventure-se!</p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                  <article class="box-icon-classic">
-                    <div
-                      class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                      <div class="unit-left">
-                        <div class="box-icon-classic-icon fa fa-angellist"></div>
-                      </div>
-                      <div class="unit-body">
-                        <h5 class="box-icon-classic-title"><a href="lazer.html">Lazer</a></h5>
-                        <p class="box-icon-classic-text">Relaxe, divirta-se, aproveite a vida!</p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
+        <h1 style="font-size: 3em; font-weight: bold; margin-top: 20px;">Beleza</h1>
+        <div class="caixinha">
+            <h2 style="font-size: 1.5em;">Para garantir a qualidade de vida associados e dependentes, o SINPROBAU mantêm convênios com diversas
+                empresas que oferecem descontos em produtos e serviços.</h2>
+            <p>Conheça abaixo os locais e empresas parceiras e desfrute dos benefícios!</p>
+        </div>
+        <div class="caixinha" id="beleza">
+            <h2>BELEZA</h2>
+            <div class="beleza">
+                <h3 class="destacado">Mayara Rocha Estética e Make-up</h3>
+                <p><strong>Designer de sobrancelha, depilação, limpeza de pele, maquiagem e micropigmentação</strong></p>
+                <p><strong>Endereço 1:</strong> Rua Nilo Mazzoni, 45,  Jd Marcia, Agudos, SP </p>
+                <p><strong>Endereço 2:</strong> Rua Henrique Save 6-7, Bauru, SP </p>
+                <p><strong>Telefone e WhatsApp:</strong> (14) 99126-7272 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em serviços e 10% de desconto em micropigmentação </u></p>
             </div>
-          </section>
+            <div class="beleza">
+                <h3 class="destacado">Studio de Beleza Irmãs Ribeiro</h3>
+                <p><strong>Cauterização, cortes unissex, designer de sobrancelhas, luzes, maquiagem, progressiva, relaxamento e manicure</strong></p>
+                <p><strong>Endereço:</strong> Rua Lisboa Junior, 1-82, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3879-2496 - (14) 99768-7514 </p>
+                <p><strong>Email:</strong> <a href="mailto:studiodebelezairmasribeiro@hotmail.com" class="email-link">studiodebelezairmasribeiro@hotmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em cortes e 15% de desconto em demais serviços </u></p>
+            </div>
+            <div class="beleza">
+                <h3 class="destacado">Perfumaria L'Acqua Di Fiori</h3>
+                <p><strong>Endereço:</strong> Rua Agenor Meira, 6-51, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3232-4027 </p>
+                <p><strong>Email:</strong> <a href="mailto:lacquadifioribau@terra.com.br" class="email-link">lacquadifioribau@terra.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 5% de desconto em pagamento à vista (no dinheiro) </u></p>
+            </div>
+            <div class="beleza">
+                <h3 class="destacado">Barbearia Zorzin</h3>
+                <p><strong>Endereço I:</strong> Avenida Nações Unidas, 22-44, Bauru, SP </p>
+                <p><strong>Endereço II:</strong> Rua Antônio Alves, 22-78, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3208-6570 </p>
+                <p><strong>Email:</strong> <a href="mailto:barbeariazorzin@outlook.com" class="email-link">barbeariazorzin@outlook.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
+            </div>
+        </div>
     </main>
 
     <!--Rodapé-->
