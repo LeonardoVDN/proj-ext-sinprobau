@@ -10,10 +10,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="images/icon-spb.ico" type="image/x-icon">
   <!-- Stylesheets-->
-  <!--<link rel="stylesheet" type="text/css"
-    href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
@@ -33,274 +30,216 @@
     html.lt-ie-10 .ie-panel {
       display: block;
     }
+
+    main {
+      margin-top: 80px;
+      margin-bottom: 80px;
+      padding: 40px;
+    }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #12533d;
+      border-color: #12533d;
+    }
+
+    .tab-content {
+      font-size: 16px;
+    }
   </style>
 </head>
-
 <body>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
-        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
-        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
-  </div>
-  <header class="section page-header">
-    <!-- Cabeçalho RD Navbar-->
-    <div class="rd-navbar-wrap">
-      <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
-        data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
-        data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
-        data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
-        data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
-        data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-        <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
-          <span></span></div>
-        <div class="rd-navbar-aside-outer">
-          <div class="rd-navbar-aside">
-            <!-- RD Navbar Panel-->
-            <div class="rd-navbar-panel">
-              <!-- RD Navbar Toggle-->
-              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-              <!-- RD Navbar Brand-->
-              <div class="rd-navbar-brand">
-                <!--Brand--><a class="brand" href="index.html"><img src="images/logo2.png" alt="logo" width="225"
-                    height="18" /></a>
+    src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+    alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+</div>
+<header class="section page-header">
+<!-- Cabeçalho RD Navbar-->
+<div class="rd-navbar-wrap">
+  <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+    data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+    data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+    data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static"
+    data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+    data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+    <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
+      <span></span>
+    </div>
+    <div class="rd-navbar-aside-outer">
+      <div class="rd-navbar-aside">
+        <!-- RD Navbar Panel-->
+        <div class="rd-navbar-panel">
+          <!-- RD Navbar Toggle-->
+          <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+          <!-- RD Navbar Brand-->
+          <div class="rd-navbar-brand">
+            <!--Brand--><a class="brand" href="index.html"><img src="images/logo2.png" alt="logo" width="225"
+                height="18" /></a>
+          </div>
+        </div>
+        <div class="rd-navbar-aside-right rd-navbar-collapse">
+          <ul class="rd-navbar-corporate-contacts">
+            <li>
+              <div class="unit unit-spacing-xs">
+                <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
+                <div class="unit-body">
+                  <p>13:00<span>pm</span> — 17:00<span>pm</span></p>
+                </div>
               </div>
-            </div>
-            <div class="rd-navbar-aside-right rd-navbar-collapse">
-              <ul class="rd-navbar-corporate-contacts">
+            </li>
+            <li>
+              <div class="unit unit-spacing-xs">
+                <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                <div class="unit-body"><a class="link-phone" href="tel:#">+55 14 3879-5313</a></div>
+              </div>
+            </li>
+          </ul><a class="button button-md button-default-outline-2 button-ujarak" href="socio.html">Seja Sócio</a>
+        </div>
+      </div>
+    </div>
+    <div class="rd-navbar-main-outer">
+      <div class="rd-navbar-main">
+        <div class="rd-navbar-nav-wrap">
+          <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
+            <li><a class="icon fa fa-facebook" href="https://www.facebook.com/sinprobauru"></a></li>
+            <li><a class="icon fa fa-youtube-play"
+                href="https://www.youtube.com/channel/UCrH5GgS-k0VkvI2xiUqppbA"></a></li>
+            <li><a class="icon fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=5514991695995"></a></li>
+            <li><a class="icon fa fa-instagram" href="https://www.instagram.com/sinprobau"></a></li>
+          </ul>
+          <!-- RD Navbar Nav-->
+          <ul class="rd-navbar-nav">
+            <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+            <li class="rd-nav-item active"><a class="rd-nav-link" href="sindicato.html">Sindicato</a></li>
+            <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.html">Convênios</a></li>
+            <li class="rd-nav-item"><a class="rd-nav-link" href="convencoes.html">Convenções</a></li>
+            <li class="rd-nav-item"><a class="rd-nav-link" href="#">Notícias</a></li>
+            <li class="rd-nav-item"><a class="rd-nav-link" href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
+            <li class="rd-nav-item"><a class="rd-nav-link" href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+</header>
+<main>
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="minhaLista" role="tablist">
+        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#sobre" role="tab">Sobre o
+          Sindicato</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#serve" role="tab">Para que serve o
+          Sindicato</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#funciona" role="tab">Como funciona
+          o nosso Sindicato</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#frentes" role="tab">Frentes de
+          trabalho</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#decisoes" role="tab">Como são
+          tomadas as decisões no SINPRO</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#abrangencia"
+          role="tab">Abrangência</a>
+
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content">
+        <div class="tab-pane active" id="sobre" role="tabpanel"><strong>Pela trajetória de luta do sindicalismo no
+            Brasil, não é difícil compreender o que é o Sindicato.</strong>
+          O Sindicato foi um espaço construído pelos próprios trabalhadores no desenvolvimento da história, apesar da
+          sua oficialização enquanto instituição pelo Estado. A simples existência de uma sede com seu corpo administrativo é insuficiente para conceituar o Sindicato.
+          Ele é muito mais do que isso.
+          Sociologicamente podemos afirmar que o Sindicato é o resultado da ação das massas organizadas em busca de
+          conquistas imediatas e profundas, como salário, emprego,
+          participação política, etc. A função do Sindicato é criar as condições para que, também, os trabalhadores
+          busquem sua afirmação enquanto "sujeito político autônomo",
+          capaz de forjar um projeto alternativo de sociedade.</div>
+        <div class="tab-pane" id="serve" role="tabpanel">Em síntese, o <strong>Sindicato</strong> serve para defender
+          os interesses da categoria e organizá-la para conquistas
+          coletivas em defesa de seus direitos e necessidades.</div>
+        <div class="tab-pane" id="funciona" role="tabpanel">Nosso Sindicato funciona com uma diretoria eletiva a cada
+          cinco anos, escolhida a partir de um programa
+          de trabalho. Essa diretoria se reúne para discutir o dia a dia do Sindicato, traçar e propor planos de
+          trabalho, de luta e seus encaminhamentos.</div>
+        <div class="tab-pane" id="frentes" role="tabpanel">Nosso Sindicato se divide em frentes de trabalho, tendo como
+          finalidade uma melhor organização e maior agilidade nos encaminhamentos. Imprensa e Comunicação;
+          Assistência, Saúde, Lazer e Cultura; Jurídico; Formação Sindical; Previdência; Assuntos Intersindicais e
+          Assuntos Parlamentares.</div>
+        <div class="tab-pane" id="decisoes" role="tabpanel">Todos os associados participam das assembleias, que são a
+          instância de decisão abaixo do Congresso que acontece a cada 3 anos. Outro nível de decisão é a Diretoria
+          efetiva para dirigir o SINPRO num período de cinco anos. Todo sindicalizado pode concorrer á eleição. Outra
+          forma de participar é como delegado sindical.</div>
+        <div class="tab-pane" id="abrangencia" role="tabpanel">Bauru, Águas de Santa Bárbara, Agudos, Arandu, Arealva,
+          Areiópolis, Avaí, Avaré, Bariri, Barra Bonita, Bocaina, Boracéia, Borebi, Botucatu, Cabrália Paulista,
+          Cerqueira César, Dois Córregos, Duartina, Espírito Santo do Turvo, Fartura, Igaraçu do Tietê, Ipaussu,
+          Itapuí, Itatinga, Lençóis Paulista, Macatuba, Manduri,
+          Mineiros do Tietê, Óleo, Pardinho, Paulistânia, Pederneiras, Piraju, Pirajuí, Piratininga, Pratânia,
+          Presidente Alves, São Manuel, São Pedro do Turvo, Sarutaiá,
+          Taguaí, Tejupá e Timburi.</div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Rodapé-->
+<footer class="section footer-corporate context-dark">
+  <div class="footer-corporate-inset">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; flex-direction: column; align-items: center; width: 35%;">
+        <div class="logo" style="display: flex; justify-content: center; padding-bottom: 25px;">
+          <img src="images/logo1.png" alt="Logo da Empresa" style="width: 60%;">
+        </div>
+        <div class="patrocinadores" style="display: flex; justify-content: center; align-items: center;">
+          <a href="http://contee.org.br/contee/" style="width: 10%;"><img src="images/logo_contee.png"
+              alt="Logo Contee"></a>
+          <a href="http://portalctb.org.br/site/" style="width: 10%;"><img src="images/logo_ctb.png"
+              alt="Logo CTB"></a>
+          <a href="http://www.fepesp.org.br/" style="width: 10%;"><img src="images/logo_fepesp.jpg"
+              alt="Logo Fepesp"></a>
+        </div>
+      </div>
+      <div class="row row-40 justify-content-lg-between" style="width: 100%;">
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+              <h6 class="text-spacing-100 text-uppercase">Sindicato dos Professores de Bauru</h6>
+              <ul class="footer-contacts d-inline-block d-sm-block">
                 <li>
-                  <div class="unit unit-spacing-xs">
-                    <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
-                    <div class="unit-body">
-                      <p>13:00<span>pm</span> — 17:00<span>pm</span></p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="unit unit-spacing-xs">
+                  <div class="unit">
                     <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                    <div class="unit-body"><a class="link-phone" href="tel:#">+55 14 3879-5313</a></div>
+                    <div class="unit-body"><a class="link-phone" href="tel:#">(14) 3879-5313 - (FAX)</a></div>
                   </div>
                 </li>
-              </ul><a class="button button-md button-default-outline-2 button-ujarak" href="socio.html">Seja Sócio</a>
-            </div>
-          </div>
-        </div>
-        <div class="rd-navbar-main-outer">
-          <div class="rd-navbar-main">
-            <div class="rd-navbar-nav-wrap">
-              <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
-                <li><a class="icon fa fa-facebook" href="https://www.facebook.com/sinprobauru"></a></li>
-                <li><a class="icon fa fa-youtube-play"
-                    href="https://www.youtube.com/channel/UCrH5GgS-k0VkvI2xiUqppbA"></a></li>
-                <li><a class="icon fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=5514991695995"></a></li>
-                <li><a class="icon fa fa-instagram" href="https://www.instagram.com/sinprobau"></a></li>
-              </ul>
-              <!-- RD Navbar Nav-->
-              <ul class="rd-navbar-nav">
-                <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
-                <li class="rd-nav-item active"><a class="rd-nav-link" href="sindicato.html">Sindicato</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Convênios</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="convencoes.html">Convenções</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Notícias</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="contato.html">Contato</a></li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                    <div class="unit-body"><a class="link-aemail" href="#">Mande um E-mail</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                    <div class="unit-body"><a class="link-location" href="#">Rua Capitão Gomes Duarte, 6-74 - Bauru -
+                        SP</a></div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-      </nav>
-    </div>
-  </header>
-  <!-- Carrossel-->
-
-    </div>
-    <!-- Swiper Pagination-->
-    <div class="swiper-pagination"></div>
-  </section>
-  <!--Informações sobre sindicato-->
-  <section class="section section-sm bg-default">
-    <div class="container">
-      <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">O Sindicato</span></h3>
-      <div class="row row-sm row-40 row-md-50">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item ">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button sindicato-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" 
-              style="font-weight: bold">
-                O QUE É SINDICATO
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                <strong>Pela trajetória de luta do sindicalismo no Brasil, não é difícil compreender o que é o Sindicato.</strong> 
-                O Sindicato foi um espaço construído pelos próprios trabalhadores no desenvolvimento da história, apesar da sua oficialização enquanto instituição pelo Estado.
-                A simples existência de uma sede com seu corpo administrativo é insuficiente para conceituar o Sindicato. Ele é muito mais do que isso.
-                Sociologicamente podemos afirmar que o Sindicato é o resultado da ação das massas organizadas em busca de conquistas imediatas e profundas, como salário, emprego, 
-                participação política, etc.A função do Sindicato é criar as condições para que, também, os trabalhadores busquem sua afirmação enquanto "sujeito político autônomo", 
-                capaz de forjar um projeto alternativo de sociedade.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed sindicato-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-               style="font-weight: bold">
-                PARA QUE SERVE O SINDICATO
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                Em síntese, o <strong>Sindicato</strong> serve para defender os interesses da categoria e organizá-la para conquistas
-                 coletivas em defesa de seus direitos e necessidades.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed sindicato-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" 
-              style="font-weight: bold">
-              COMO FUNCIONA O NOSSO SINDICATO
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                Nosso Sindicato funciona com uma diretoria eletiva a cada cinco anos, escolhida a partir de um programa
-                 de trabalho. Essa diretoria se reúne para discutir o dia a dia do Sindicato, traçar e propor planos de trabalho, de luta e seus encaminhamentos.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed sindicato-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" 
-              style="font-weight: bold">
-              FRENTES DE TRABALHO
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                Nosso Sindicato se divide em fretes de trabalho, tendo como finalidade uma melhor organização e maior agilidade nos encaminhamentos; Imprensa e Comunicação; 
-                Assistência, Saúde, Lazer e Cultura; Jurídico; Formação Sindical; Previdência; Assuntos Intersindicais e Assuntos Parlamentares.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed sindicato-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" 
-              style="font-weight: bold">
-              COMO SÃO TOMADAS AS DECISÕES NO SINPRO - INSTÂNCIAS DE DELIBERAÇÃO
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                Todos os associados participam das assembleias, que são a instância de decisão abaixo do Congresso que acontece a cada 3 anos. Outro nível de decisão é a Diretoria
-                efetiva para dirigir o SINPRO num período de cinco anos. Todo sindicalizado pode concorrer á eleição. Outra forma de participar é como delegado sindical.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSix">
-              <button class="accordion-button collapsed sindicato-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" 
-              style="font-weight: bold">
-              ABRANGÊNCIA
-              </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                Bauru, Águas de Santa Bárbara, Agudos, Arandu, Arealva, Areiópolis, Avaí, Avaré, Bariri, Barra Bonita, Bocaina, Boracéia, Borebi, Botucatu, Cabrália Paulista, 
-                Cerqueira César, Dois Córregos, Duartina, Espírito Santo do Turvo, Fartura, Igaraçu do Tietê, Ipaussu, Itapuí, Itatinga, Lençóis Paulista, Macatuba, Manduri, 
-                Mineiros do Tietê, Óleo, Pardinho, Paulistânia, Pederneiras, Piraju, Pirajuí, Piratininga, Pratânia, Presidente Alves, São Manuel, São Pedro do Turvo, Sarutaiá, 
-                Taguaí, Tejupá e Timburi.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSeven" >
-              <button class="accordion-button collapsed sindicato-button"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" 
-              aria-expanded="false" aria-controls="collapseSeven" style="font-weight: bold">
-              PARA QUE SERVE O SINDICATO
-              </button>
-            </h2>
-            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample" style="background-color: #d3cece;">
-              <div class="accordion-body">
-                Em síntese, o Sindicato serve para defender os interesses da categoria e organizá-la para conquistas coletivas em defesa de seus direitos e necessidades.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-     </div>
-  </section>
-
-    
-  </section>
-  <!-- Banner-->
-  <section class="section bg-default text-center offset-top-50">
-    <div class="parallax-container" data-parallax-img="images/parallax-1-1920x850.jpg">
-      <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
-        <div class="container">
-          <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span
-              class="d-block font-weight-semi-bold">SINPROBAU</span></h2>
-          <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Our agency offers travelers
-            various tours and excursions with destinations all over the world. Browse our website to find your dream
-            tour!</p><a class="button button-secondary button-pipaluk" href="#">Seja Sócio</a>
-        </div>
       </div>
     </div>
-  </section>
-  <!-- Rodapé-->
-  <footer class="section footer-corporate context-dark">
-    <div class="footer-corporate-inset">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="display: flex; flex-direction: column; align-items: center; width: 35%;">
-          <div class="logo" style="display: flex; justify-content: center; padding-bottom: 25px;">
-            <img src="images/logo1.png" alt="Logo da Empresa" style="width: 60%;">
-          </div>
-          <div class="patrocinadores" style="display: flex; justify-content: center; align-items: center;">
-            <a href="http://contee.org.br/contee/" style="width: 10%;"><img src="images/logo_contee.png" alt="Logo Contee"></a>
-            <a href="http://portalctb.org.br/site/" style="width: 10%;"><img src="images/logo_ctb.png" alt="Logo CTB"></a>
-            <a href="http://www.fepesp.org.br/" style="width: 10%;"><img src="images/logo_fepesp.jpg" alt="Logo Fepesp"></a>
-          </div>
-        </div>
-        <div class="row row-40 justify-content-lg-between" style="width: 100%;">
-          <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
-            <div class="oh-desktop">
-              <div class="wow slideInRight" data-wow-delay="0s">
-                <h6 class="text-spacing-100 text-uppercase">Sindicato dos Professores de Bauru</h6>
-                <ul class="footer-contacts d-inline-block d-sm-block">
-                  <li>
-                    <div class="unit">
-                      <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                      <div class="unit-body"><a class="link-phone" href="tel:#">(14) 3879-5313 - (FAX)</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit">
-                      <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                      <div class="unit-body"><a class="link-aemail" href="#">Mande um E-mail</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit">
-                      <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                      <div class="unit-body"><a class="link-location" href="#">Rua Capitão Gomes Duarte, 6-74 - Bauru - SP</a></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="copyright" style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
-    <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
   </div>
+</footer>
+<div class="copyright"
+  style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
+  <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
+</div>
 
-  <!-- Global Mailform Output-->
-  <div class="snackbars" id="form-output-global"></div>
-  <!-- Javascript-->
-  <script src="js/core.min.js"></script>
-  <script src="js/script.js"></script>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- Javascript-->
+<script src="js/core.min.js"></script>
+<script src="js/script.js"></script>
 </body>
-
 </html>

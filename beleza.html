@@ -15,63 +15,165 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        main {
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel,
+        html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+
+        body {
+            
+            margin: 0 auto;
+            background-color: #d4f2cd;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .caixinha {
+            background-color: #edf7eb;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
+            max-width: 800px;
+            width: 100%;
+            border-top: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .caixinha:first-child {
+            margin-top: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        p {
+            margin: 0;
+            color: #555;
+        }
+
+        .caixinha h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .caixinha p {
+            margin-top: 5px;
+        }
+
+        .caixinha strong {
+            font-weight: bold;
+        }
+
+        .caixinha em {
+            font-style: italic;
+        }
+
+        .caixinha u {
+            text-decoration: underline;
+        }
+
+        .destacado {
+            color: #4c8a41;
+            margin-bottom: 0;
+            margin-top: 10px;
+            font-size: 1.17em;
+        }
+
+        .email-link {
+            color: #4c8a41;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .desconto {
+            text-decoration: underline;
+        }
+
+        .site-link {
+            color: #4c8a41;
+            text-decoration: none;
+        }
+
+        .site-link:hover {
+            text-decoration: underline;
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             margin-top: 20px;
             margin-bottom: 20px;
         }
 
-        #principal {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 25px;
-            color: #02231C;
-        }
-
-        .bt:hover {
-            background-color: #107050;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
+        .botao {
+            padding: 10px 20px;
+            font-size: 12px;
+            background-color: #4c8a41;
+            color: #fff;
+            border: none;
             border-radius: 5px;
-        }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 24px;
             cursor: pointer;
+            margin: 5px 5px;
+            width: 10em;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
         }
 
-        #iframe-container {
+        .linha-botoes {
             width: 100%;
-            height: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
         }
 
-        iframe {
-            width: 100%;
-            height: 100%;
+        .linha-botoes .botao {
+            margin: 5px;
+            width: 150px;
+        }
+
+
+        .botao-link {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .botao:hover {
+            background-color: #396e34;
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+                src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+                alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+    </div>
     <!--Cabeçalho-->
     <header class="section page-header">
         <!-- Cabeçalho RD Navbar-->
@@ -117,8 +219,8 @@
                                         </div>
                                     </div>
                                 </li>
-                            </ul><a class="button button-md button-default-outline-2 button-ujarak" href="socio.html">Seja
-                                Sócio</a>
+                            </ul><a class="button button-md button-default-outline-2 button-ujarak"
+                                href="socio.html">Seja Sócio</a>
                         </div>
                     </div>
                 </div>
@@ -137,10 +239,12 @@
                             <ul class="rd-navbar-nav">
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="sindicato.html">Sindicato</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.html">Convênios</a></li>
-                                <li class="rd-nav-item active"><a class="rd-nav-link" href="convencoes.html">Convenções</a></li>
+                                <li class="rd-nav-item active"><a class="rd-nav-link" href="convenios.html">Convênios</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="convencoes.html">Convenções</a>
+                                </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="#">Notícias</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link"
+                                        href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="contato.html">Contato</a></li>
                             </ul>
                         </div>
@@ -149,43 +253,52 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div id="principal">
-            <h4>Convenções - Educação Básica</h4>
-            <a href="convencoes.html" class="btn btn-outline-dark" style="border: 1px solid #6ba715; color: #6ba715; background: #ffffff;">Voltar</a>
-        </div>
-        <!--Convenções Educação Básica-->
-        <div class="album py-5 bg-light">
-            <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="images/logocard.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title" style="margin-bottom: 25px;">Acordo Coletivo SENAC 2021</h5>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button id="open-pdf-button" type="button"
-                                            class="btn btn-sm btn-outline-secondary bt"
-                                            style="border: 1px solid #02231C; background: #02231C; color: #ffffff;">Ver</button>
-                                    </div>
-                                    <small class="text-muted">23/03/2023</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!--Principal-->
+    <main>
+        <h1 style="font-size: 3em; font-weight: bold; margin-top: 20px;">Beleza</h1>
+        <div class="caixinha">
+            <h2 style="font-size: 1.5em;">Para garantir a qualidade de vida associados e dependentes, o SINPROBAU mantêm convênios com diversas
+                empresas que oferecem descontos em produtos e serviços.</h2>
+            <p>Conheça abaixo os locais e empresas parceiras e desfrute dos benefícios!</p>
+        </div>
+        <div class="caixinha" id="beleza">
+            <h2>BELEZA</h2>
+            <div class="beleza">
+                <h3 class="destacado">Mayara Rocha Estética e Make-up</h3>
+                <p><strong>Designer de sobrancelha, depilação, limpeza de pele, maquiagem e micropigmentação</strong></p>
+                <p><strong>Endereço 1:</strong> Rua Nilo Mazzoni, 45,  Jd Marcia, Agudos, SP </p>
+                <p><strong>Endereço 2:</strong> Rua Henrique Save 6-7, Bauru, SP </p>
+                <p><strong>Telefone e WhatsApp:</strong> (14) 99126-7272 </p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em serviços e 10% de desconto em micropigmentação </u></p>
             </div>
-            <div id="pdf-modal" class="modal">
-                <div class="modal-content" style="height: 80%;">
-                    <span class="close" id="close-pdf-modal">&times;</span>
-                    <iframe id="pdf-iframe" src="" frameborder="0"></iframe>
-                </div>
+            <div class="beleza">
+                <h3 class="destacado">Studio de Beleza Irmãs Ribeiro</h3>
+                <p><strong>Cauterização, cortes unissex, designer de sobrancelhas, luzes, maquiagem, progressiva, relaxamento e manicure</strong></p>
+                <p><strong>Endereço:</strong> Rua Lisboa Junior, 1-82, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3879-2496 - (14) 99768-7514 </p>
+                <p><strong>Email:</strong> <a href="mailto:studiodebelezairmasribeiro@hotmail.com" class="email-link">studiodebelezairmasribeiro@hotmail.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 20% de desconto em cortes e 15% de desconto em demais serviços </u></p>
+            </div>
+            <div class="beleza">
+                <h3 class="destacado">Perfumaria L'Acqua Di Fiori</h3>
+                <p><strong>Endereço:</strong> Rua Agenor Meira, 6-51, Centro, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3232-4027 </p>
+                <p><strong>Email:</strong> <a href="mailto:lacquadifioribau@terra.com.br" class="email-link">lacquadifioribau@terra.com.br</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 5% de desconto em pagamento à vista (no dinheiro) </u></p>
+            </div>
+            <div class="beleza">
+                <h3 class="destacado">Barbearia Zorzin</h3>
+                <p><strong>Endereço I:</strong> Avenida Nações Unidas, 22-44, Bauru, SP </p>
+                <p><strong>Endereço II:</strong> Rua Antônio Alves, 22-78, Bauru, SP </p>
+                <p><strong>Telefone:</strong> (14) 3208-6570 </p>
+                <p><strong>Email:</strong> <a href="mailto:barbeariazorzin@outlook.com" class="email-link">barbeariazorzin@outlook.com</a></p>
+                <p><strong>Desconto:</strong> <u class="desconto"> 30% de desconto </u></p>
             </div>
         </div>
     </main>
-    <!-- Rodapé-->
+
+    <!--Rodapé-->
     <footer class="section footer-corporate context-dark">
         <div class="footer-corporate-inset">
             <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
@@ -211,26 +324,23 @@
                                     <li>
                                         <div class="unit">
                                             <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                                            <div class="unit-body"><a class="link-phone" href="tel:#">(14) 3879-5313
-                                                    -
+                                            <div class="unit-body"><a class="link-phone" href="tel:#">(14) 3879-5313 -
                                                     (FAX)</a></div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="unit">
                                             <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                                            <div class="unit-body"><a class="link-aemail" href="#">Mande um
-                                                    E-mail</a>
+                                            <div class="unit-body"><a class="link-aemail" href="#">Mande um E-mail</a>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="unit">
-                                            <div class="unit-left"><span class="icon fa fa-location-arrow"></span>
-                                            </div>
-                                            <div class="unit-body"><a class="link-location" href="#">Rua Capitão
-                                                    Gomes
-                                                    Duarte, 6-74 - Bauru - SP</a></div>
+                                            <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                                            <div class="unit-body"><a class="link-location" href="#">Rua Capitão Gomes
+                                                    Duarte, 6-74 - Bauru -
+                                                    SP</a></div>
                                         </div>
                                     </li>
                                 </ul>
@@ -245,27 +355,12 @@
         style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
         <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
     </div>
+
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        const openPdfButton = document.getElementById('open-pdf-button');
-        const pdfModal = document.getElementById('pdf-modal');
-        const closePdfModal = document.getElementById('close-pdf-modal');
-        const pdfIframe = document.getElementById('pdf-iframe');
-
-        openPdfButton.addEventListener('click', () => {
-            pdfIframe.src = 'convencoes/senac/senac.pdf';
-            pdfModal.style.display = 'block';
-        });
-
-        closePdfModal.addEventListener('click', () => {
-            pdfIframe.src = '';
-            pdfModal.style.display = 'none';
-        });
-    </script>
 </body>
 
 </html>
