@@ -32,6 +32,7 @@
       if($row == 1) 
       {
         $_SESSION['usuario'] = $email;
+        $_SESSION["loggedin"] = true;
         header('Location: add_news.php');
         exit();
       } 

@@ -62,9 +62,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <div class="rd-navbar-main">
             <div class="rd-navbar-nav-wrap">
               <ul class="rd-navbar-nav">
-                <li class="rd-nav-item active"><a class="rd-nav-link" href="add_news.php">Adicionar Noticia!</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="add_news.php">Adicionar Noticia!</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="info_contatos.php">Contatos!</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="info_socio.php">Seja Socio!</a></li>
+                <li class="rd-nav-item active"><a class="rd-nav-link" href="info_socio.php">Seja Socio!</a></li>
               </ul>
             </div>
           </div>
@@ -77,7 +77,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
   </div>
   <p><a href="logout.php">Sair</a></p>
-
 
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
