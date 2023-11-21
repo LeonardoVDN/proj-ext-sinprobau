@@ -126,6 +126,68 @@
 </head>
 
 <body>
+<?php 
+    include('conexao.php');
+      try
+      {
+        $conexao = new PDO($dsn, $usuario, $senha);      
+        if(isset($_POST["boto"]))
+        {
+
+          $query = "insert into socio (nome, sobrenome, nascimento, email, cidadania, endereco, tipolocal, estadocivil, cidade, estado, cep, rg, cpf, telefone, celular, disciplina, locaisdetrabalho, formacao, outros, dependente1, graudeparentesco1, nascimento1, dependente2, graudeparentesco2, nascimento2, dependente3, graudeparentesco3, nascimento3, dependente4, graudeparentesco4, nascimento4, instituicao, data, cidadeinstituicao, obsevacao) values (:nome, :sobrenome, :nascimento, :email, :cidadania, :endereco, :tipolocal, :estadocivil, :cidade, :estado, :cep, :rg, :cpf, :telefone, :celular, :disciplina, :locaisdetrabalho, :formacao, :outros, :dependente1, :graudeparentesco1, :nascimento1, :dependente2, :graudeparentesco2, :nascimento2, :dependente3, :graudeparentesco3, :nascimento3, :dependente4, :graudeparentesco4, :nascimento4, :instituicao, :data, :cidadeinstituicao, :obsevacao)";
+                     
+          $stmt = $conexao->prepare($query);
+          $stmt->bindValue(':nome', $_POST['nome']);
+          $stmt->bindValue(':sobrenome', $_POST['sobrenome']);
+          $stmt->bindValue(':nascimento', $_POST['nascimento']);
+          $stmt->bindValue(':email', $_POST['email']);
+          $stmt->bindValue(':cidadania', $_POST['cidadania']);
+          $stmt->bindValue(':endereco', $_POST['endereco']);
+          $stmt->bindValue(':tipolocal', $_POST['tipolocal']);
+          $stmt->bindValue(':estadocivil', $_POST['estadocivil']);
+          $stmt->bindValue(':cidade', $_POST['cidade']);
+          $stmt->bindValue(':estado', $_POST['estado']);
+          $stmt->bindValue(':cep', $_POST['cep']);
+          $stmt->bindValue(':rg', $_POST['rg']);
+          $stmt->bindValue(':cpf', $_POST['cpf']);
+          $stmt->bindValue(':telefone', $_POST['telefone']);
+          $stmt->bindValue(':celular', $_POST['celular']);
+          $stmt->bindValue(':disciplina', $_POST['disciplina']);
+          $stmt->bindValue(':locaisdetrabalho', $_POST['locaisdetrabalho']);
+          $stmt->bindValue(':formacao', $_POST['formacao']);
+          $stmt->bindValue(':outros', $_POST['outros']);
+          $stmt->bindValue(':dependente1', $_POST['dependente1']);
+          $stmt->bindValue(':graudeparentesco1', $_POST['graudeparentesco1']);
+          $stmt->bindValue(':nascimento1', $_POST['nascimento1']);
+          $stmt->bindValue(':dependente2', $_POST['dependente2']);
+          $stmt->bindValue(':graudeparentesco2', $_POST['graudeparentesco2']);
+          $stmt->bindValue(':nascimento2', $_POST['nascimento2']);
+          $stmt->bindValue(':dependente3', $_POST['dependente3']);
+          $stmt->bindValue(':graudeparentesco3', $_POST['graudeparentesco3']);
+          $stmt->bindValue(':nascimento3', $_POST['nascimento3']);
+          $stmt->bindValue(':dependente4', $_POST['dependente4']);
+          $stmt->bindValue(':graudeparentesco4', $_POST['graudeparentesco4']);
+          $stmt->bindValue(':nascimento4', $_POST['nascimento4']);
+          $stmt->bindValue(':instituicao', $_POST['instituicao']);
+          $stmt->bindValue(':data', $_POST['data']);
+          $stmt->bindValue(':cidadeinstituicao', $_POST['cidadeinstituicao']);
+          $stmt->bindValue(':obsevacao', $_POST['obsevacao']);
+
+          
+          $stmt->execute();
+
+          $_lista = $stmt->fetch();
+          header('Location: index.html'); 
+          exit;
+        }
+         
+      }
+      catch(PDOException $e)
+      {
+        echo 'message' . $e->getMessage();
+        echo '<br> Code: ' . $e->getCode();
+      }
+	  ?>
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
         src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
         alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
@@ -208,42 +270,42 @@
           <!-- Product Big-->
           <article class="product-big" style="background-color: #d3cece;">
             <div class="testbox">
-              <form action="/">
+              <form method="post">
                 <h2>Seja Sócio</h2>    
                 <div class="form-row">
                   <div class="form-group col-md-5">
                     <label for="inputName">Nome</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Nome">
+                    <input type="text" class="form-control" name="nome" id="inputName" placeholder="Nome">
                   </div>
                   <div class="form-group col-md-5">
-                    <label for="inputName2">Sobrenome</label>
-                    <input type="text" class="form-control" id="inputName2" placeholder="Sobrenome">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputNascimento">Nascimento</label>
-                    <input type="date" class="form-control" id="inputNascimento">
+                    <label for="nascimento">Nascimento</label>
+                    <input type="date" class="form-control" name="nascimento" id="nascimento">
                     </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputEmail">Email</label>
-                  <input type="text" class="form-control" id="inputEmail" placeholder="exemplo@exemplo.com">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" name="email" id="email" placeholder="exemplo@exemplo.com">
                 </div>
                 <div class="form-group">
-                  <label for="inputCidadany">Natural de</label>
-                  <input type="text" class="form-control" id="inputCidadany" placeholder="Cidadania">
+                  <label for="cidadania">Natural de</label>
+                  <input type="text" class="form-control" name="cidadania" id="cidadania" placeholder="Cidadania">
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress">Endereço</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Rua ..., nº 0">
+                  <label for="endereco">Endereço</label>
+                  <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua ..., nº 0">
                 </div>
                 <div class="form-group">
-                  <label for="inputLocal">Tipo Local</label>
-                  <input type="text" class="form-control" id="inputLocal" placeholder="Apartamento, hotel, casa, etc.">
+                  <label for="tipolocal">Tipo Local</label>
+                  <input type="text" class="form-control" name="tipolocal" id="tipolocal" placeholder="Apartamento, hotel, casa, etc.">
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-4">
-                    <label for="inputEstadoCivil">Estado Civil</label>
-                    <select id="inputEstadoCivil" class="form-control">
+                    <label for="estadocivil">Estado Civil</label>
+                    <select id="estadocivil" name="estadocivil" class="form-control">
                       <option selected>Escolher...</option>
                       <option>Soleiro(a)</option>
                       <option>Casado(a)</option>
@@ -254,53 +316,53 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputCity">Cidade</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="form-control" name="cidade" id="cidade">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputEstado">Estado</label>
-                    <select id="inputEstado" class="form-control">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" class="form-control">
                       <option selected>Escolher...</option>
                       <option>...</option>
                     </select>
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputCEP">CEP</label>
-                    <input type="number" class="form-control" id="inputCEP">
+                    <label for="cep">CEP</label>
+                    <input type="number" class="form-control" name="cep" id="cep">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputRG">RG</label>
-                    <input type="number" class="form-control" id="inputRG">
+                    <label for="rg">RG</label>
+                    <input type="number" class="form-control" name="rg" id="rg">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputCPF">CPF</label>
-                    <input type="number" class="form-control" id="inputCPF">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputTelphone">Telefone</label>
-                    <input type="number" class="form-control" id="inputTelphone">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputCelular">Celular</label>
-                    <input type="number" class="form-control" id="inputCelular">
+                    <label for="cpf">CPF</label>
+                    <input type="number" class="form-control" name="cpf" id="cpf">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputDiscipline">Disciplina</label>
-                    <input type="text" class="form-control" id="inputDiscipline">
+                    <label for="telefone">Telefone</label>
+                    <input type="number" class="form-control" name="telefone" id="telefone">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="celular">Celular</label>
+                    <input type="number" class="form-control" name="celular" id="celular">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="disciplina">Disciplina</label>
+                    <input type="text" class="form-control" name="disciplina" id="disciplina">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputLocais">Locais de trabalho</label>
-                    <input type="text" class="form-control" id="inputLocais">
+                    <label for="locaisdetrabalho">Locais de trabalho</label>
+                    <input type="text" class="form-control" name="locaisdetrabalho" id="locaisdetrabalho">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputFormacao">Formação</label>
-                    <select id="inputFormacao" class="form-control">
+                    <label for="formacao">Formação</label>
+                    <select id="formacao" name="formacao" class="form-control">
                       <option selected>Escolher...</option>
                       <option>Doutorado</option>
                       <option>Mestrado</option>
@@ -310,90 +372,90 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                  <label for="inputOutros">Outros</label>
-                  <input type="text" class="form-control" id="inputOutros">
+                  <label for="outros">Outros</label>
+                  <input type="text" class="form-control" name="outros" id="outros">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputDependente1">Dependente</label>
-                    <input type="text" class="form-control" id="inputDependente1">
+                    <label for="dependente1">Dependente</label>
+                    <input type="text" class="form-control" name="dependente1" id="dependente1">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputParentesco1">Grau de Parentesco</label>
-                    <input type="text" class="form-control" id="inputParentesco1">
+                    <label for="graudeparentesco1">Grau de Parentesco</label>
+                    <input type="text" class="form-control" name="graudeparentesco1" id="graudeparentesco1">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputNascimento1">Nascimento</label>
-                    <input type="date" class="form-control" id="inputNascimento1">
+                    <label for="nascimento1">Nascimento</label>
+                    <input type="date" class="form-control" name="nascimento1" id="nascimento1">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputDependente2">Dependente</label>
-                    <input type="text" class="form-control" id="inputDependente2">
+                    <label for="dependente2">Dependente</label>
+                    <input type="text" class="form-control" name="dependente2" id="dependente2">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputParentesco2">Grau de Parentesco</label>
-                    <input type="text" class="form-control" id="inputParentesco2">
+                    <label for="graudeparentesco2">Grau de Parentesco</label>
+                    <input type="text" class="form-control" name="graudeparentesco2" id="graudeparentesco2">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputNascimento2">Nascimento</label>
-                    <input type="date" class="form-control" id="inputNascimento2">
+                    <label for="nascimento2">Nascimento</label>
+                    <input type="date" class="form-control" name="nascimento2" id="nascimento2">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputDependente3">Dependente</label>
-                    <input type="text" class="form-control" id="inputDependente3">
+                    <label for="dependente3">Dependente</label>
+                    <input type="text" class="form-control" name="dependente3" id="dependente3">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputParentesco3">Grau de Parentesco</label>
-                    <input type="text" class="form-control" id="inputParentesco3">
+                    <label for="graudeparentesco3">Grau de Parentesco</label>
+                    <input type="text" class="form-control" name="graudeparentesco3" id="graudeparentesco3">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputNascimento3">Nascimento</label>
-                    <input type="date" class="form-control" id="inputNascimento3">
+                    <label for="nascimento3">Nascimento</label>
+                    <input type="date" class="form-control" name="nascimento3" id="nascimento3">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputDependente4">Dependente</label>
-                    <input type="text" class="form-control" id="inputDependente4">
+                    <label for="dependente4">Dependente</label>
+                    <input type="text" class="form-control" name="dependente4" id="dependente4">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="inputParentesco4">Grau de Parentesco</label>
-                    <input type="text" class="form-control" id="inputParentesco4">
+                    <label for="graudeparentesco4">Grau de Parentesco</label>
+                    <input type="text" class="form-control" name="graudeparentesco4" id="graudeparentesco4">
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputNascimento4">Nascimento</label>
-                    <input type="date" class="form-control" id="inputNascimento4">
+                    <label for="nascimento4">Nascimento</label>
+                    <input type="date" class="form-control" name="nascimento4" id="nascimento4">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-7">
-                  <label for="inputInstituicao">Instituição</label>
-                  <input type="text" class="form-control" id="inputInstituicao">
+                  <label for="instituicao">Instituição</label>
+                  <input type="text" class="form-control" name="instituicao" id="instituicao">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-7">
-                  <label for="inputInstituicao">Data</label>
-                  <input type="date" class="form-control" id="inputInstituicao">
+                  <label for="data">Data</label>
+                  <input type="date" class="form-control" name="data" id="data">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-7">
-                  <label for="inputInstituicaoCidade">Cidade</label>
-                  <input type="text" class="form-control" id="inputInstituicaoCidade">
+                  <label for="cidadeinstituicao">Cidade</label>
+                  <input type="text" class="form-control" name="cidadeinstituicao" id="cidadeinstituicao">
                   </div>
                 </div>
                 <div class="item">
-                  <p>Observações</p>
-                  <textarea rows="5"></textarea>
+                    <label for="obsevacao">Observações</label>
+                    <textarea name="obsevacao" class="form-control" rows="4" id="obsevacao"></textarea>
                 </div>
                 <div class="btn-block">
-                  <button type="button button-md button-default-outline-2 button-ujarak" href="/">Enviar</button>
+                  <button type="button button-md button-default-outline-2 button-ujarak" name="boto" id="boto" >Enviar</button>
                 </div>
               </form>
             </div>
