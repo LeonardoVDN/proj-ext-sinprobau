@@ -1,12 +1,12 @@
 <?php
-// Inicie a sessão
-session_start();
-
-// Verifique se o usuário está autenticado
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("Location: login.php");
-    exit();
-}
+  // Inicie a sessão
+  session_start();
+  include('conexao.php');
+  // Verifique se o usuário está autenticado
+  if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+      header("Location: login.php");
+      exit();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -76,9 +76,98 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
     <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
   </div>
-  <p><a href="logout.php">Sair</a></p>
+  
+  
+  <section class="contato mt-5 mb-5">
+    <div class="container">
+      <p><a class="btn btn-success" style="color: #fff; background-color: #107050;" href="logout.php">Sair</a></p>
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h1 class="page-title">Adicione a Noticia!</h1>
+          <p>Preencha os campos abaixo com as informações da noticia!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="box p-3">
+            <form method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="titulo" class="form-control" id="titulo">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="noticia">Corpo da Noticia</label>
+                    <textarea name="noticia" class="form-control" rows="4" id="noticia"></textarea>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="row">-->
+                <div class="col-lg-3" style="padding: 0;">
+                  <div class="form-group">
+                    <label for="data">Data da publicação</label>
+                    <input type="date" name="data" class="form-control" id="data">
+                  </div>
+                </div>
+                <div class="col-lg-3" style="padding: 0;">
+                  <div class="form-group">
+                    <label for="link">Link para a Noticia</label>
+                    <input type="text" name="link" class="form-control" id="link">
+                  </div>
+                </div>
+              <!--</div>-->
+              <div class="form-group">
+                <label for="" class="form-label text-white">Imagem</label>
+                <input type="file" class="form-control encontre" name="pic" accept="image/*" id="pic" aria-describedby="helpId">
+							</div>
+              <div class="form-group">
+              <div class="mb-3 px-5"><input type="submit" value="gravar" name="gravar" id="gravar" class=" botao"></div>     
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <?php 
+      try
+      {
+        $conexao = new PDO($dsn, $usuario, $senha);      
+        if(isset($_POST["gravar"]))
+        {
+          if(isset($_FILES['pic']))
+          {
+            $ext = strtolower(substr($_FILES['pic']['name'],-4)); //Pegando extensão do arquivo
+            $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+            $dir = './imagem/'; //Diretório para uploads 
+            move_uploaded_file($_FILES['pic']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
+          }
 
+          $query = "insert into noticias (data, titulo, noticia, imagem, link) values (:data, :titulo, :noticia, :imagem, :link)";
+                     
+          $stmt = $conexao->prepare($query);
+          $stmt->bindValue(':data', $_POST['data']);
+          $stmt->bindValue(':titulo', $_POST['titulo']);
+          $stmt->bindValue(':noticia', $_POST['noticia']);
+          $stmt->bindValue(':imagem', $new_name);
+          $stmt->bindValue(':link', $_POST['link']);
+          
+          $stmt->execute();
 
+          $_lista = $stmt->fetch();
+          exit;
+        }
+         
+      }
+      catch(PDOException $e)
+      {
+        echo 'message' . $e->getMessage();
+        echo '<br> Code: ' . $e->getCode();
+      }
+	  ?>
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>
   <!-- Javascript-->
