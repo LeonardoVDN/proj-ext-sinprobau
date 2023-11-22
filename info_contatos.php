@@ -7,6 +7,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("Location: login.php");
     exit();
 }
+
+include("conexao.php");
+
+$sql = "SELECT * FROM contato";
+$result = $conn->query($sql) or die($conn->error);
+$i = 1;
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +47,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     html.lt-ie-10 .ie-panel {
       display: block;
     }
+
+    html, body {
+      height: 100%;
+    }
+
+    main {
+      height: 100%;
+      margin: 8px;
+    }
+
+    .box {
+      border: 1px solid #50ba87;
+      border-radius: 5px;
+      margin-top: 10px;
+      padding: 15px;
+    }
   </style>
 </head>
 
@@ -62,21 +84,36 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
           <div class="rd-navbar-main">
             <div class="rd-navbar-nav-wrap">
               <ul class="rd-navbar-nav">
-                <li class="rd-nav-item"><a class="rd-nav-link" href="add_news.php">Adicionar Noticia!</a></li>
-                <li class="rd-nav-item active"><a class="rd-nav-link" href="info_contatos.php">Contatos!</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="info_socio.php">Seja Socio!</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="add_news.php">Adicionar Notícia</a></li>
+                <li class="rd-nav-item active"><a class="rd-nav-link" href="info_contatos.php">Contatos</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="info_socio.php">Seja Sócio</a></li>
               </ul>
+              <a class="button button-md button-default-outline-2 button-ujarak" href="logout.php" style="background-color: #107050;">Sair</a>
             </div>
           </div>
         </div>
       </nav>
     </div>
   </header>
+
+  <main>
+    <div class="container">
+      <?php while($dado = $result->fetch_array()){ ?>
+        <?php echo "<div id='box-".$i."' class='box'>"; ?>
+        <p><b>Nome:  </b><?php echo $dado["nome"]; ?></p>
+        <p><b>E-mail:  </b><?php echo $dado["email"]; ?></p>
+        <p><b>Telefone:  </b><?php echo $dado["telefone"]; ?></p>
+        <p><b>Celular:  </b><?php echo $dado["celular"]; ?></p>
+        <p><b>Observação:  </b><?php echo $dado["observacao"]; ?></p>
+        <?php echo "</div>"; ?>
+      <?php } ?>
+    </div>
+  </main>
+
   <div class="copyright"
     style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
     <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
   </div>
-  <p><a href="logout.php">Sair</a></p>
 
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"></div>

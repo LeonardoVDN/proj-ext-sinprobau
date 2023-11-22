@@ -41,6 +41,14 @@
     html.lt-ie-10 .ie-panel {
       display: block;
     }
+
+    html, body {
+      height: 100%;
+    }
+
+    section {
+      height: 100%;
+    }
   </style>
 </head>
 
@@ -62,69 +70,74 @@
           <div class="rd-navbar-main">
             <div class="rd-navbar-nav-wrap">
               <ul class="rd-navbar-nav">
-                <li class="rd-nav-item active"><a class="rd-nav-link" href="add_news.php">Adicionar Noticia!</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="info_contatos.php">Contatos!</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="info_socio.php">Seja Socio!</a></li>
+                <li class="rd-nav-item active"><a class="rd-nav-link" href="add_news.php">Adicionar Notícia</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="info_contatos.php">Contatos</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="info_socio.php">Seja Sócio</a></li>
               </ul>
+              <a class="button button-md button-default-outline-2 button-ujarak" href="logout.php" style="background-color: #107050;">Sair</a>
             </div>
           </div>
         </div>
       </nav>
     </div>
   </header>
-  <div class="copyright"
-    style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
-    <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
-  </div>
   
   
-  <section class="contato mt-5 mb-5">
+  
+  <section class="noticias" style="display: flex; align-items: center;">
     <div class="container">
-      <p><a class="btn btn-success" style="color: #fff; background-color: #107050;" href="logout.php">Sair</a></p>
       <div class="row mt-5">
         <div class="col-lg-12">
           <h1 class="page-title">Adicione a Noticia!</h1>
           <p>Preencha os campos abaixo com as informações da noticia!</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-top: 10px;">
         <div class="col-lg-12">
           <div class="box p-3">
             <form method="post" enctype="multipart/form-data">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12" style="padding: 0;">
                   <div class="form-group">
-                    <label for="titulo">Titulo</label>
+                    <label for="titulo">Título</label>
                     <input type="text" name="titulo" class="form-control" id="titulo">
                   </div>
                 </div>
-                <div class="col-lg-6">
+              </div>
+              <div class="row" style="margin-top: 0px;">
+                <div class="col-lg-12" style="padding: 0;">
                   <div class="form-group">
-                    <label for="noticia">Corpo da Noticia</label>
+                    <label for="noticia">Corpo da Notícia</label>
                     <textarea name="noticia" class="form-control" rows="4" id="noticia"></textarea>
                   </div>
                 </div>
               </div>
-              <!--<div class="row">-->
-                <div class="col-lg-3" style="padding: 0;">
+              <div class="row" style="margin-top: 0px;">
+                <div class="col-lg-6" style="padding: 0;">
                   <div class="form-group">
-                    <label for="data">Data da publicação</label>
-                    <input type="date" name="data" class="form-control" id="data">
-                  </div>
-                </div>
-                <div class="col-lg-3" style="padding: 0;">
-                  <div class="form-group">
-                    <label for="link">Link para a Noticia</label>
+                    <label for="link">Link para a Notícia</label>
                     <input type="text" name="link" class="form-control" id="link">
                   </div>
                 </div>
-              <!--</div>-->
-              <div class="form-group">
-                <label for="" class="form-label text-white">Imagem</label>
-                <input type="file" class="form-control encontre" name="pic" accept="image/*" id="pic" aria-describedby="helpId">
-							</div>
-              <div class="form-group">
-              <div class="mb-3 px-5"><input type="submit" value="gravar" name="gravar" id="gravar" class=" botao"></div>     
+              </div>
+              <div class="row" style="margin-top: 0px;">
+                <div class="col-lg-6" style="padding: 0;">
+                  <div class="form-group">
+                    <label for="data">Data da Publicação</label>
+                    <input type="date" name="data" class="form-control" id="data">
+                  </div>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 0px;">
+                <div class="col-lg-6" style="padding: 0;">
+                  <div class="form-group">
+                    <label for="imagem">Imagem</label>
+                    <input type="file" class="form-control encontre" name="pic" accept="image/*" id="pic" aria-describedby="helpId">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="display: flex; justify-content: flex-end;">
+                  <input type="submit" value="gravar" name="gravar" id="gravar" class=" botao" style="color: #fff; background-color: #107050; border-color: #107050; cursor: pointer; border-radius: 5px; text-transform: capitalize;">    
               </div>
             </form>
           </div>
@@ -132,6 +145,10 @@
       </div>
     </div>
   </section>
+  <div class="copyright"
+    style="display: flex; justify-content: center; align-items: center; background: #12533d; color: #ffffff;">
+    <p>&copy;Sindicato dos Professores de Bauru 2023 - Todos os direitos reservados.</p>
+  </div>
   <?php 
       try
       {

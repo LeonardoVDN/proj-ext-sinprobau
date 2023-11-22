@@ -134,7 +134,7 @@
         if(isset($_POST["boto"]))
         {
 
-          $query = "insert into socio (nome, sobrenome, nascimento, email, cidadania, endereco, tipolocal, estadocivil, cidade, estado, cep, rg, cpf, telefone, celular, disciplina, locaisdetrabalho, formacao, outros, dependente1, graudeparentesco1, nascimento1, dependente2, graudeparentesco2, nascimento2, dependente3, graudeparentesco3, nascimento3, dependente4, graudeparentesco4, nascimento4, instituicao, data, cidadeinstituicao, obsevacao) values (:nome, :sobrenome, :nascimento, :email, :cidadania, :endereco, :tipolocal, :estadocivil, :cidade, :estado, :cep, :rg, :cpf, :telefone, :celular, :disciplina, :locaisdetrabalho, :formacao, :outros, :dependente1, :graudeparentesco1, :nascimento1, :dependente2, :graudeparentesco2, :nascimento2, :dependente3, :graudeparentesco3, :nascimento3, :dependente4, :graudeparentesco4, :nascimento4, :instituicao, :data, :cidadeinstituicao, :obsevacao)";
+          $query = "insert into socio (nome, sobrenome, nascimento, email, cidadania, endereco, tipolocal, estadocivil, cidade, estado, cep, rg, cpf, telefone, celular, disciplina, locaisdetrabalho, formacao, outros, dependente1, graudeparentesco1, nascimento1, dependente2, graudeparentesco2, nascimento2, dependente3, graudeparentesco3, nascimento3, dependente4, graudeparentesco4, nascimento4, diploma, instituicao, data, cidadeinstituicao, obsevacao) values (:nome, :sobrenome, :nascimento, :email, :cidadania, :endereco, :tipolocal, :estadocivil, :cidade, :estado, :cep, :rg, :cpf, :telefone, :celular, :disciplina, :locaisdetrabalho, :formacao, :outros, :dependente1, :graudeparentesco1, :nascimento1, :dependente2, :graudeparentesco2, :nascimento2, :dependente3, :graudeparentesco3, :nascimento3, :dependente4, :graudeparentesco4, :nascimento4, :diploma, :instituicao, :data, :cidadeinstituicao, :obsevacao)";
                      
           $stmt = $conexao->prepare($query);
           $stmt->bindValue(':nome', $_POST['nome']);
@@ -168,6 +168,7 @@
           $stmt->bindValue(':dependente4', $_POST['dependente4']);
           $stmt->bindValue(':graudeparentesco4', $_POST['graudeparentesco4']);
           $stmt->bindValue(':nascimento4', $_POST['nascimento4']);
+          $stmt->bindValue(':diploma', $_POST['diploma']);
           $stmt->bindValue(':instituicao', $_POST['instituicao']);
           $stmt->bindValue(':data', $_POST['data']);
           $stmt->bindValue(':cidadeinstituicao', $_POST['cidadeinstituicao']);
@@ -251,7 +252,7 @@
                 <li class="rd-nav-item"><a class="rd-nav-link" href="sindicato.html">Sindicato</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="convenios.html">Convênios</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="convencoes.html">Convenções</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Notícias</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="noticias.php">Notícias</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="contato.html">Contato</a></li>
               </ul>
@@ -261,12 +262,7 @@
       </nav>
     </div>
   </header>
-  <!-- Carrossel-->
 
-    </div>
-    <!-- Swiper Pagination-->
-    <div class="swiper-pagination"></div>
-  </section>
   <!--Informações sobre sindicato-->
   <section class="section section-sm bg-default">
     <div class="container">
@@ -312,7 +308,7 @@
                     <label for="estadocivil">Estado Civil</label>
                     <select id="estadocivil" name="estadocivil" class="form-control">
                       <option selected>Escolher...</option>
-                      <option>Soleiro(a)</option>
+                      <option>Solteiro(a)</option>
                       <option>Casado(a)</option>
                       <option>Viúvo(a)</option>
                       <option>Divorciado(a)</option>
@@ -325,35 +321,61 @@
                     <input type="text" class="form-control" name="cidade" id="cidade">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="estado">Estado</label>
-                    <select id="estado" name="estado" class="form-control">
+                    <label for="inputEstado">Estado</label>
+                    <select id="inputEstado" class="form-control">
                       <option selected>Escolher...</option>
-                      <option>...</option>
+                      <option>Acre</option>
+                      <option>Alagoas</option>
+                      <option>Amapá</option>
+                      <option>Amazonas</option>
+                      <option>Bahia</option>
+                      <option>Ceará</option>
+                      <option>Espírito Santo</option>
+                      <option>Goiás</option>
+                      <option>Maranhão</option>
+                      <option>Mato Grosso</option>
+                      <option>Mato Grosso do Sul</option>
+                      <option>Minas Gerais</option>
+                      <option>Pará</option>
+                      <option>Paraíba</option>
+                      <option>Paraná</option>
+                      <option>Pernambuco</option>
+                      <option>Piauí</option>
+                      <option>Rio de Janeiro</option>
+                      <option>Rio Grande do Norte</option>
+                      <option>Rio Grande do Sul</option>
+                      <option>Rondônia</option>
+                      <option>Roraima</option>
+                      <option>Santa Catarina</option>
+                      <option>São Paulo</option>
+                      <option>Sergipe</option>
+                      <option>Tocantins</option>
+                      <option>Distrito Federal</option>
                     </select>
                   </div>
                   <div class="form-group col-md-2">
                     <label for="cep">CEP</label>
-                    <input type="number" class="form-control" name="cep" id="cep">
+                    <input type="text" class="form-control" name="cep" id="cep">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="rg">RG</label>
-                    <input type="number" class="form-control" name="rg" id="rg">
+                    <input type="text" class="form-control" name="rg" id="rg">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="cpf">CPF</label>
-                    <input type="number" class="form-control" name="cpf" id="cpf">
+                    <input type="text" class="form-control" name="cpf" id="cpf">
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="telefone">Telefone</label>
-                    <input type="number" class="form-control" name="telefone" id="telefone">
+                    <input type="text" class="form-control" name="telefone" id="telefone">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="celular">Celular</label>
-                    <input type="number" class="form-control" name="celular" id="celular">
+                    <input type="text" class="form-control" name="celular" id="celular">
                   </div>
                 </div>
                 <div class="form-row">
@@ -365,21 +387,22 @@
                     <label for="locaisdetrabalho">Locais de trabalho</label>
                     <input type="text" class="form-control" name="locaisdetrabalho" id="locaisdetrabalho">
                   </div>
-                  <div class="form-group col-md-2">
-                    <label for="formacao">Formação</label>
-                    <select id="formacao" name="formacao" class="form-control">
-                      <option selected>Escolher...</option>
-                      <option>Doutorado</option>
-                      <option>Mestrado</option>
-                      <option>Outros</option>
-                    </select>
-                  </div>
                 </div>
                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                  <label for="outros">Outros</label>
-                  <input type="text" class="form-control" name="outros" id="outros">
-                  </div>
+                  <div class="form-group col-md-4">
+                      <label for="inputFormacao">Formação</label>
+                      <select id="inputFormacao" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>Doutorado</option>
+                        <option>Mestrado</option>
+                        <option>Outros</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                    <label for="inputOutros">Outra Formação</label>
+                    <input type="text" class="form-control" id="inputOutros">
+                    </div>
+                </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
@@ -438,6 +461,17 @@
                   </div>
                 </div>
                 <div class="form-row">
+                  <div class="col-md-12 mt-3 mb-3">
+                    <p>Autorizo o desconto em folha de pagamento da mensalidade decorrente desta filiação. Tal desconto dar-se-á em folha da instituição denominada: </p>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-7">
+                    <label for="diploma">Diploma/Holerite</label>
+                    <input type="file" name="diploma" class="form-control" id="diploma">
+                  </div>
+                </div>
+                <div class="form-row">
                   <div class="form-group col-md-7">
                   <label for="instituicao">Instituição</label>
                   <input type="text" class="form-control" name="instituicao" id="instituicao">
@@ -469,21 +503,7 @@
   </section> 
     
   </section>
-  <!-- Banner-->
-  <section class="section bg-default text-center offset-top-50">
-    <div class="parallax-container" data-parallax-img="images/parallax-1-1920x850.jpg">
-      <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
-        <div class="container">
-          <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span
-              class="d-block font-weight-semi-bold">First-class Impressions</span><span
-              class="d-block font-weight-light">are Waiting for You!</span></h2>
-          <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Our agency offers travelers
-            various tours and excursions with destinations all over the world. Browse our website to find your dream
-            tour!</p><a class="button button-secondary button-pipaluk" href="#">Book a Tour Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <!-- Rodapé-->
   <footer class="section footer-corporate context-dark">
     <div class="footer-corporate-inset">
