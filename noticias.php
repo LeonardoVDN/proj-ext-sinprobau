@@ -31,39 +31,26 @@
             display: block;
         }
 
-        .fizreceita{
-          background: rgb(189, 189, 189);
-          border: #444;
-          border-radius: 2px;
-          text-transform: uppercase;
-          padding: 5px 5px;
-          text-decoration: none;
-          color:#444;
+        .box {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: 1px solid;
         }
         
-        .icone{
-          height: 25px;
-          width: 25px;
+        .noticia {
+            display: flex;
+            align-items: center;
+            padding: 20px;
         }
-        .icones{
-          height: 18px;
-          width: 18px; 
+
+        .foto {
+            display: flex;
+            justify-content: center;
         }
-        img{
-          border-radius: 7px;
-          height: 300px;
-          width: 300px;
+
+        .ntc {
+            font-size: 16px;
         }
-        .cordefundo{
-          background:rgb(86, 0, 18);
-        }
-        .fundo{
-          background: #444;
-        }
-        body{
-          background: #444;
-        }
-        
     </style>
 </head>
 
@@ -170,23 +157,21 @@
     $sql = mysqli_query($conn, "SELECT * FROM noticias");            
     while($linha = mysqli_fetch_array($sql))
     {
-      $id = $linha['id'];
-      echo "<div class='container text-center fundo rounded-2 mt-4 text-capitalize'>
-                <div class='row'>
-                    <div class='col-sm foto mt-2'>
+      echo "<div class='container box'>
+                <div class='row mb-2 noticia'>
+                    <div class='foto col-md-6'>
                         <img src=imagem/".$linha['imagem']."></img>
                     </div>
-                    <div class='col-sm dados text-center mt-1 text-white'>
-                        <h4 class='text-white'>".$linha['titulo']."</h4>
+                    <div class='dados col-md-6'>
+                        <h4 class='titulo'>".$linha['titulo']."</h4>
                         <p>".$linha['data']."</p>
-                        <p>".$linha['noticia']."</p>
-                        <a>".$linha['link']."</a>   
+                        <p class = 'ntc'>".$linha['noticia']."</p>
+                        <a href=".$linha['link'].">".$linha['link']."</a>   
                     </div>
                 </div>
             </div>";
-      //echo "<a href='receitas.php?idAlt=".$id."'>Ja fiz esta receita</a>";
     }
-    echo "<br><br><div class='text-white text-center'><strong><p>Não há mais noticias </p></strong></div>";                  
+    echo "<br><br><div class=' text-center'><strong><p>Não há mais noticias </p></strong></div>";                  
 ?> 
     <!--Rodapé-->
     <footer class="section footer-corporate context-dark">
