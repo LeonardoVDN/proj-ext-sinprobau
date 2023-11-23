@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="wide wow-animation" lang="pt-BR">
 
 <head>
@@ -105,7 +105,7 @@
                                     </div>
                                 </li>
                             </ul><a class="button button-md button-default-outline-2 button-ujarak"
-                                href="socio.html">Seja Sócio</a>
+                                href="socio.php">Seja Sócio</a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                                 <li class="rd-nav-item active"><a class="rd-nav-link" href="noticias.php">Notícias</a></li>
                                 <li class="rd-nav-item"><a class="rd-nav-link"
                                         href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="contato.html">Contato</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="contato.php">Contato</a></li>
                             </ul>
                         </div>
                     </div>

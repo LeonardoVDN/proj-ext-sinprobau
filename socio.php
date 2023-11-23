@@ -232,7 +232,7 @@
                     <div class="unit-body"><a class="link-phone" href="tel:#">+55 14 3879-5313</a></div>
                   </div>
                 </li>
-              </ul><a class="button button-md button-default-outline-2 button-ujarak" href="socio.html">Seja Sócio</a>
+              </ul><a class="button button-md button-default-outline-2 button-ujarak" href="socio.php">Seja Sócio</a>
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@
                 <li class="rd-nav-item"><a class="rd-nav-link" href="convencoes.html">Convenções</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="noticias.php">Notícias</a></li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="carteirinha_virtual.html">Carteirinha Virtual</a></li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="contato.html">Contato</a></li>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="contato.php">Contato</a></li>
               </ul>
             </div>
           </div>
@@ -402,7 +402,6 @@
                     <label for="inputOutros">Outra Formação</label>
                     <input type="text" class="form-control" id="inputOutros">
                     </div>
-                </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
